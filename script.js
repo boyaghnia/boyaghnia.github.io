@@ -35,3 +35,18 @@ window.onscroll = function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Gulir ke atas dengan efek smooth
 }
+
+// Scroll Down
+
+// JavaScript to hide and show the "scroll-down" element
+window.addEventListener("scroll", function () {
+    const scrollDownElement = document.getElementById("scrollDown");
+    
+    if (window.scrollY > 0) {
+        // Hide the scroll-down element when scrolling down
+        scrollDownElement.classList.add("hidden");
+    } else {
+        // Show the scroll-down element when scrolled to the top
+        scrollDownElement.classList.remove("hidden");
+    }
+});

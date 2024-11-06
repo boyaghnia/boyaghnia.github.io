@@ -1,0 +1,66 @@
+Langkah-Langkah Upload Proyek dari VS Code ke GitHub
+
+1. Buka Proyek di VS Code
+
+Buka folder proyek kamu di VS Code. Kamu bisa membuka folder dengan File > Open Folder dan pilih folder proyek yang ingin diupload.
+
+2. Inisialisasi Git di Proyek
+
+Jika belum ada versi kontrol (Git) di proyek tersebut:
+
+	1.	Buka Terminal di VS Code (tekan Ctrl + ~ atau Terminal > New Terminal).
+	2.	Ketik perintah berikut untuk menginisialisasi repositori Git:
+
+git init
+
+
+	3.	Tambahkan semua file untuk commit pertama:
+
+git add .
+
+
+	4.	Buat commit pertama:
+
+git commit -m "Initial commit"
+
+
+
+3. Hubungkan Repositori Lokal dengan Repositori GitHub
+
+	1.	Salin URL repositori GitHub:
+	•	Buka repositori di GitHub dan salin URL dengan format HTTPS atau SSH. URL ini biasanya ada di bagian atas repositori, di bawah tombol Code.
+	2.	Tambahkan URL Repositori ke Proyek di VS Code:
+	•	Di Terminal, ketik perintah berikut (gantilah URL_REPOSITORI dengan URL yang kamu salin):
+
+git remote add origin URL_REPOSITORI
+
+
+
+4. Upload Proyek (Push) ke GitHub
+
+	1.	Untuk mengupload commit pertama, gunakan perintah:
+
+git push -u origin main
+
+Catatan: Jika branch utama repositori GitHub kamu bukan main tetapi master atau lainnya, sesuaikan perintah di atas.
+
+	2.	Jika diminta login, masukkan username dan password GitHub atau token akses GitHub.
+
+5. Verifikasi di GitHub
+
+Buka repositori GitHub kamu di browser. Proyek kamu seharusnya sudah terupload dan bisa dilihat di repositori tersebut.
+
+Cara Memperbarui Proyek (Setelah Commit Pertama)
+
+Jika ada perubahan atau file baru:
+
+	1.	Buka Terminal di VS Code.
+	2.	Gunakan perintah berikut untuk mengupload perubahan:
+
+git add .
+git commit -m "Deskripsi perubahan"
+git push
+
+
+
+Setiap kali kamu membuat perubahan, cukup lakukan langkah git add, git commit, dan git push untuk memperbarui repositori GitHub.
