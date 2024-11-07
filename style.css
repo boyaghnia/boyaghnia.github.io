@@ -48,6 +48,7 @@ body h2 {
     line-height: 72px;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
 /* Navbar Style */
 
 .navbar {
@@ -122,6 +123,7 @@ body h2 {
     text-decoration: underline;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
 /* Social Media */
 
 .sosmed {
@@ -165,6 +167,7 @@ body h2 {
     cursor: pointer;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
 /* Button Naik */
 
 #scrollToTopBtn {
@@ -208,7 +211,7 @@ body h2 {
     text-decoration: none;
 }
 
-.scroll-down .arrow {
+.scroll-down .arrow-down {
     display: inline-block;
     font-size: 30px;
     animation: bergerak 1.5s ease-in-out infinite;
@@ -240,6 +243,7 @@ body h2 {
     pointer-events: none;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
 /* Hero Section */
 
 #hero {
@@ -275,46 +279,6 @@ body h2 {
 
 .button-hero a {
     text-decoration: none;
-}
-
-/* About Me */
-
-#about {
-    background: var(--gray-900);
-    height: 70vh;
-    width: 100%;
-}
-
-.about-me h2 span {
-    content: "";
-    display: block;
-    position: relative;
-    border-bottom: 2px solid var(--red-900);
-    top: -32px;
-    left: 155px;
-    width: 150px;
-}
-
-.about-me ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-top: 30px;
-}
-
-.about-me ul li {
-    margin-left: 10px;
-}
-
-.about-me ul li:first-child {
-    margin-left: 0;
-}
-
-.about-me img {
-    filter: invert(100);
-    scale: 90%;
 }
 
 .button-primary2 {
@@ -381,6 +345,49 @@ body h2 {
     animation: slideInBackground 30s linear;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
+/* About Me */
+
+#about {
+    background: var(--gray-900);
+    height: 50vh;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.about-me h2 span {
+    content: "";
+    display: block;
+    position: relative;
+    border-bottom: 2px solid var(--red-900);
+    top: -32px;
+    left: 155px;
+    width: 150px;
+}
+
+.about-me ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 30px;
+}
+
+.about-me ul li {
+    margin-left: 10px;
+}
+
+.about-me ul li:first-child {
+    margin-left: 0;
+}
+
+.about-me img {
+    filter: invert(100);
+    width: 40px;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
 /* Pas Foto */
 
 .rectangle {
@@ -390,7 +397,7 @@ body h2 {
     height: 340px;
     z-index: 1;
     position: relative;
-    left: 125px;
+    left: 135px;
     bottom: 190px;
     transition: all 0.5s ease-in-out;
 }
@@ -401,7 +408,7 @@ body h2 {
     opacity: 100%;
     z-index: 2;
     position: relative;
-    left: 125px;
+    left: 135px;
     top: 150px;
     filter: grayscale(1);
     transition: transform 0.5s ease-in-out;
@@ -419,6 +426,189 @@ body h2 {
     border: 1px solid var(--red-900);
 }
 
+/* --------------------------------------------------------------------------------------------------- */
+/* Certificate */
+
+#certificate {
+    background: var(--gray-900);
+    height: 40vh;
+    width: 100%;
+}
+
+#certificate h2 {
+    margin-bottom: -20px;
+}
+
+#certificate h2 span {
+    content: "";
+    display: block;
+    position: relative;
+    border-bottom: 2px solid var(--red-900);
+    top: -32px;
+    left: 190px;
+    width: 150px;
+}
+
+.cards {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+
+.card-certificate {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 20px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+}
+
+.card-content p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.card-certificate:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card-certificate:hover {
+    color: var(--red-900);
+    border: 1px solid var(--red-900);
+}
+
+.card-certificate .card-title {
+    font-size: 20px;
+}
+
+.cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+    border-radius: 0px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background: var(--white);
+}
+
+.cards::-webkit-scrollbar-track {
+    background: var(--red-900);
+}
+
+@media (min-width: 500px) {
+    .card-certificate {
+        flex-basis: calc(50% - 10px);
+    }
+
+    .card-certificate:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 700px) {
+    .card-certificate {
+        flex-basis: calc(calc(100% / 3) - 20px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .card-certificate {
+        flex-basis: calc(25% - 30px);
+    }
+
+    .card-certificate:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+/* Thumbnail */
+
+/* Style untuk thumbnail */
+.thumbnail {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Style untuk overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style untuk gambar besar di overlay */
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Style untuk tombol Close */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 9px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.close-btn:hover {
+    background-color: white;
+    color: var(--red-900);
+}
+
+/* Style untuk tombol panah */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
 /* Timeline */
 
 .timeline-2 {
@@ -631,6 +821,7 @@ body h2 {
     }
 }
 
+/* --------------------------------------------------------------------------------------------------- */
 /* Project */
 
 .project h2 span {
@@ -722,3 +913,4 @@ body h2 {
     color: var(--red-900);
     text-decoration: underline;
 }
+

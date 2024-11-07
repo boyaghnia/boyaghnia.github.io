@@ -56,7 +56,7 @@
     </nav>
 
     <!-- Social Media -->
-    <div class="sosmed">
+    <!-- <div class="sosmed">
       <ul>
           <li>
             <a href="#" id="mail"></a><i data-feather="mail"></i>
@@ -72,7 +72,7 @@
           </li>
         </ul> 
         <span></span>  
-    </div>
+    </div> -->
 
     <!-- Button Naik -->
     <button id="scrollToTopBtn" onclick="scrollToTop()"><a href="#" id="arrow-up"></a><i data-feather="arrow-up"></i></button>
@@ -80,7 +80,7 @@
     <!-- Scroll Down -->
     <div class="scroll-down" id="scrollDown">
       <a href="#about" id="">
-        <span class="arrow"><img src="logo/down.png" alt=""></span>
+        <span class="arrow-down"><img src="logo/down.png" alt=""></span>
         <p>Scroll Down</p>
       </a>
     </div>
@@ -110,7 +110,7 @@
       </div>
      </section>
 
-     <!-- About Me -->
+     <!-- About Me Section -->
      <section id="about">
       <div class="container h-100">
         <div class="row h-100">
@@ -122,9 +122,9 @@
 
           <div class="col-md-6 about-me my-auto">
             <h2>About Me<span></span></h2>
-            <p>Hallo! nama saya Boy Aghnia Rifadhan, saya adalah individu yang proaktif, terorganisir, dan berkomitmen untuk memberikan hasil terbaik. Saya selalu mencari peluang untuk terus belajar dan berkembang dalam dunia desain grafis. Pemahaman saya tentang desain tidak hanya terbatas pada aspek estetika, tetapi juga pada aspek fungsional dan strategis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquam aperiam tenetur accusantium dolor obcaecati quibusdam sit quaerat, voluptates id, possimus alias distinctio amet omnis quae magnam maiores totam. Ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam animi at accusantium fugiat cupiditate, quas quia optio commodi eaque atque impedit, repudiandae inventore veniam dicta alias error placeat. Ipsam, voluptatum.</p>
 
-            <p>Saya sangat antusias untuk berkontribusi pada proyek-proyek kreatif yang menantang dan memotivasi di lingkungan kerja yang dinamis. Jika Anda mencari seorang desainer grafis yang berdedikasi dan memiliki keahlian dalam menciptakan solusi visual yang efektif, saya yakin dapat membawa nilai tambah pada tim Anda. Mari kita berkolaborasi untuk menciptakan karya-karya yang menginspirasi dan meninggalkan kesan mendalam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam magni, pariatur, harum animi fuga id corporis praesentium eaque sapiente, iusto modi sit labore fugit? Quidem vero sequi voluptates quae! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi perspiciatis quis natus. Possimus delectus quae saepe sit, eos est exercitationem deserunt quidem neque quam ea cupiditate ipsum ab incidunt. Aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident voluptas ratione neque tempore odit sequi amet accusamus suscipit ad deserunt iure recusandae omnis dolorum. At dicta nam ex facilis.</p>
             <ul>
               <li>
                 <img src="logo/photoshop.png" alt="">
@@ -146,7 +146,114 @@
      </section>
 
 
-     <!-- Timeline -->
+     <!-- Thumbnail Overlay  -->
+    <div class="overlay" id="overlay">
+      <button class="close-btn" onclick="closeOverlay()">X</button>
+      <button class="arrow arrow-left" onclick="prevImage()">❮</button>
+      <img id="overlayImage" src="" alt="Gambar Besar">
+      <button class="arrow arrow-right" onclick="nextImage()">❯</button>
+    </div>
+
+     <!-- Certificate -->
+    <section id="certificate">
+
+      <div class="container h-100">
+        <h2>Certificates<span></span></h2>
+        <ul class="cards">
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                      <img src="asset/img/acp.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(0)">
+                      <p>Adobe Certified Professional in Graphic Design & Illustration Using Adobe Illustrator</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                      <img src="asset/img/coursera-graphicdesign.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(1)">
+                      <p>Coursera - Graphic Design</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                      <img src="asset/img/digitalent-jrgraphicdesign.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(2)">
+                      <p>Kominfo - Digitalent Schoolarship - Goverment Transformation Academy - Junior Graphic Designer</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                      <img src="asset/img/linkedin-photoshop.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(3)">
+                      <p>LinkedIn Learning - Photoshop 2024 Essential Training</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Vestibulum pharetra fringilla felis sit amet tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras et arcu sit amet est consequat feugiat. Nam ut sapien pulvinar.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Donec ut tincidunt nisl. Vivamus eget eros id elit feugiat mollis. Nam sed sem quis libero finibus tempor.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Aliquam eget nisl auctor, sollicitudin ipsum at, dignissim ligula. Donec tincidunt in elit et pellentesque. Integer posuere metus ac massa mollis euismod.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p> Vivamus eget eros id elit feugiat mollis. Nam sed sem quis libero finibus tempor.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Duis id congue turpis. Donec sodales porta felis, nec ultricies ante. Nam placerat vitae metus sit amet tempor. Aliquam ac dictum est.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Pellentesque eget eros eget justo efficitur fermentum.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Phasellus posuere nec nibh ut tincidunt. Aenean mollis turpis non eros posuere, at luctus leo hendrerit. Integer non libero sapien.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="card-certificate">
+                <div>
+                    <div class="card-content">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ornare metus ac lectus scelerisque volutpat.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+      </div>
+    
+    </section>
+
+     <!-- Timeline Section -->
     <section id="timeline" style="background-color: var(--gray-900);">
       <div class="container py-5">
         <h2 class="text-center">Experience</h2>
@@ -221,6 +328,8 @@
       </div>
     </section>
 
+
+    <!-- Project Section -->
     <section id="project">
         <div class="container h-100">
           
@@ -305,6 +414,7 @@
           </div>
         </div>
     </section>
+
 
     <!-- JavaScript -->
     <script src="script.js"></script>

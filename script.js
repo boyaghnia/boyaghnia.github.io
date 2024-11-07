@@ -50,3 +50,48 @@ window.addEventListener("scroll", function () {
         scrollDownElement.classList.remove("hidden");
     }
 });
+
+// Thumbnail Overlay
+
+// Array gambar besar
+const images = ["asset/img/acp.png", "asset/img/coursera-graphicdesign.png", "asset/img/digitalent-jrgraphicdesign.png", "asset/img/linkedin-photoshop.png"];
+let currentIndex = 0;
+
+// Fungsi untuk membuka overlay dengan gambar tertentu
+function openOverlay(index) {
+    currentIndex = index;
+    document.getElementById("overlayImage").src = images[currentIndex];
+    document.getElementById("overlay").style.display = "flex";
+
+    // Tambahkan event listener untuk mendeteksi penekanan tombol panah pada keyboard
+    document.addEventListener("keydown", handleKeydown);
+}
+
+// Fungsi untuk menutup overlay
+function closeOverlay() {
+    document.getElementById("overlay").style.display = "none";
+
+    // Hapus event listener saat overlay ditutup
+    document.removeEventListener("keydown", handleKeydown);
+}
+
+// Fungsi untuk melihat gambar berikutnya
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("overlayImage").src = images[currentIndex];
+}
+
+// Fungsi untuk melihat gambar sebelumnya
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("overlayImage").src = images[currentIndex];
+}
+
+// Fungsi untuk menangani penekanan tombol pada keyboard
+function handleKeydown(event) {
+    if (event.key === "ArrowRight") {
+        nextImage();
+    } else if (event.key === "ArrowLeft") {
+        prevImage();
+    }
+}
