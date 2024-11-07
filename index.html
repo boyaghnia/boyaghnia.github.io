@@ -146,7 +146,7 @@
      </section>
 
 
-     <!-- Thumbnail Overlay  -->
+     <!-- Thumbnail Overlay Certificate  -->
     <div class="overlay" id="overlay">
       <button class="close-btn" onclick="closeOverlay()">X</button>
       <button class="arrow arrow-left" onclick="prevImage()">❮</button>
@@ -163,7 +163,7 @@
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                      <img src="asset/img/acp.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(0)">
+                      <img src="asset/img/acp.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(0)">
                       <p>Adobe Certified Professional in Graphic Design & Illustration Using Adobe Illustrator</p>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                      <img src="asset/img/coursera-graphicdesign.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(1)">
+                      <img src="asset/img/coursera-graphicdesign.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(1)">
                       <p>Coursera - Graphic Design</p>
                     </div>
                 </div>
@@ -179,8 +179,8 @@
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                      <img src="asset/img/digitalent-jrgraphicdesign.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(2)">
-                      <p>Kominfo - Digitalent Schoolarship - Goverment Transformation Academy - Junior Graphic Designer</p>
+                      <img src="asset/img/digitalent-jrgraphicdesign.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(2)">
+                      <p>Kominfo - Digitalent Scholarship - Goverment Transformation Academy - Junior Graphic Designer</p>
                     </div>
                 </div>
             </li>
@@ -195,56 +195,40 @@
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                        <p>Vestibulum pharetra fringilla felis sit amet tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras et arcu sit amet est consequat feugiat. Nam ut sapien pulvinar.</p>
+                      <img src="asset/img/indonesianext.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(4)">
+                      <p>Top 1000 Certifications - 8th IndonesiaNEXT</p>
                     </div>
                 </div>
             </li>
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                        <p>Donec ut tincidunt nisl. Vivamus eget eros id elit feugiat mollis. Nam sed sem quis libero finibus tempor.</p>
+                      <img src="asset/img/rubrik-illustrator.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(5)">
+                      <p>Rubrik Grafis - Adobe Illustrator</p>
                     </div>
                 </div>
             </li>
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                        <p>Aliquam eget nisl auctor, sollicitudin ipsum at, dignissim ligula. Donec tincidunt in elit et pellentesque. Integer posuere metus ac massa mollis euismod.</p>
+                      <img src="asset/img/digitalent-htmlcss.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(6)">
+                      <p>Kominfo - Digitalent Scholarship - Professional Academy - HTML, CSS & JavaScript</p>
                     </div>
                 </div>
             </li>
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                        <p> Vivamus eget eros id elit feugiat mollis. Nam sed sem quis libero finibus tempor.</p>
+                      <img src="asset/img/progate-3day.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(7)">
+                      <p>Progate - 3 Day Kreatif Workshop</p>
                     </div>
                 </div>
             </li>
             <li class="card-certificate">
                 <div>
                     <div class="card-content">
-                        <p>Duis id congue turpis. Donec sodales porta felis, nec ultricies ante. Nam placerat vitae metus sit amet tempor. Aliquam ac dictum est.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                        <p>Pellentesque eget eros eget justo efficitur fermentum.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                        <p>Phasellus posuere nec nibh ut tincidunt. Aenean mollis turpis non eros posuere, at luctus leo hendrerit. Integer non libero sapien.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ornare metus ac lectus scelerisque volutpat.</p>
+                      <img src="asset/img/progate-webnodejs.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(8)">
+                      <p>Progate - Path Pengembangan Web (Node.js)</p>
                     </div>
                 </div>
             </li>
@@ -328,6 +312,16 @@
       </div>
     </section>
 
+     <!-- Thumbnail Overlay Project  -->
+     <!-- <div class="overlay2" id="overlay2">
+      <button class="close-btn" onclick="closeOverlay2()">X</button>
+      <img id="overlayImage2" src="" alt="Gambar Besar">
+    </div> -->
+
+    <div id="overlay2" class="overlay">
+      <img id="overlayImage2" src="" alt="Overlay Image">
+      <span class="close-btn" onclick="closeOverlay2()">X</span>
+    </div>
 
     <!-- Project Section -->
     <section id="project">
@@ -336,11 +330,11 @@
           <!-- Pembungkus Project 1 -->
           <div class="row h-50 mb-5 project">
               <h2>Project<span></span></h2>
-              
+
               <!-- Gambar Project 1 -->
               <div class="col-md-6">
                 <div class="gambar-project-kiri">
-                  <img src="bonang.png" alt="">
+                  <img src="asset/img/topologi.jpg" alt="" onclick="openOverlay2(0)">
                 </div>
               </div>
 
@@ -381,7 +375,7 @@
               <!-- Gambar Project 2 -->
               <div class="col-md-6">
                 <div class="gambar-project-kanan">
-                  <img src="bonang.png" alt="">
+                  <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(1)">
                 </div>
               </div>
             </div>

@@ -352,7 +352,7 @@ body h2 {
     background: var(--gray-900);
     height: 50vh;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .about-me h2 span {
@@ -468,7 +468,7 @@ body h2 {
     border-radius: 0px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
     scroll-snap-align: start;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
 }
 
 .card-content p {
@@ -491,7 +491,7 @@ body h2 {
 }
 
 .cards::-webkit-scrollbar {
-    height: 6px;
+    height: 2px;
 }
 
 .cards::-webkit-scrollbar-thumb,
@@ -538,7 +538,7 @@ body h2 {
 }
 
 /* --------------------------------------------------------------------------------------------------- */
-/* Thumbnail */
+/* Thumbnail Certificate */
 
 /* Style untuk thumbnail */
 .thumbnail {
@@ -598,6 +598,11 @@ body h2 {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: var(--red-900);
 }
 
 .arrow-left {
@@ -611,7 +616,7 @@ body h2 {
 /* --------------------------------------------------------------------------------------------------- */
 /* Timeline */
 
-.timeline-2 {
+#timeline {
     transition: all .5s ease;
 }
 
@@ -850,6 +855,8 @@ body h2 {
     filter: grayscale(1);
     position: relative;
     z-index: 1;
+    cursor: pointer;
+    transition: filter 0.5s ease;
 }
 
 .project img:hover {
@@ -858,10 +865,15 @@ body h2 {
 
 .project:hover h5 {
     color: var(--red-900);
+    transition: color 0.5s ease;
 }
 
 .project:hover img {
     filter: grayscale(0);
+}
+
+.project:hover h5 {
+    color: var(--red-900);
 }
 
 .text-pr-kanan {
@@ -914,3 +926,25 @@ body h2 {
     text-decoration: underline;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
+/* Thumbnail Overlay Project */
+
+/* Style untuk overlay */
+.overlay2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style untuk gambar besar di overlay */
+.overlay2 img {
+    max-width: 90%;
+    max-height: 90%;
+}
