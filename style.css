@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --white: white;
     --gray-100: #f2f1ef;
