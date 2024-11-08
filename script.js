@@ -36,7 +36,7 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Gulir ke atas dengan efek smooth
 }
 
-// Scroll Down
+// Scroll Down ----------------------------------------------------------------------------------
 
 // JavaScript to hide and show the "scroll-down" element
 window.addEventListener("scroll", function () {
@@ -146,3 +146,5 @@ function handleKeydown(event) {
         }
     }
 }
+
+// Panah Kanan Certificate ----------------------------------------------------------------------------------
