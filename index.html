@@ -1,33 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="logo-small.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="logo-small.png" type="image/x-icon" />
     <title>Boy Aghnia Rifadhan</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
     <!-- CSS -->
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
 
   <body>
+    <!-- Preloader -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
     <!-- Navbar -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <nav class="navbar navbar-expand-lg navbar-dark mt-3 position-fixed w-100">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="logo2.png" alt="logo" width="30" class="d-inline-block me-3">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img
+            src="logo2.png"
+            alt="logo"
+            width="30"
+            class="d-inline-block me-3"
+          />Portfolio</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,20 +71,19 @@
               <a class="nav-link" href="#project">Project</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
 
           <div>
-            <button class="button-primary">Let's Talk</button>
+            <button class="button-primary">Resume</button>
           </div>
-
         </div>
       </div>
     </nav>
 
     <!-- Social Media -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <!-- <div class="sosmed">
       <ul>
           <li>
@@ -75,31 +103,45 @@
     </div> -->
 
     <!-- Button Naik -->
-    <button id="scrollToTopBtn" onclick="scrollToTop()"><a href="#" id="arrow-up"></a><i data-feather="arrow-up"></i></button>
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <a href="#" id="arrow-up"></a><i data-feather="arrow-up"></i>
+    </button>
 
     <!-- Scroll Down -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <div class="scroll-down" id="scrollDown">
       <a href="#about" id="">
-        <span class="arrow-down"><img src="logo/down.png" alt=""></span>
+        <span class="arrow-down"><img src="logo/down.png" alt="" /></span>
         <p>Scroll Down</p>
       </a>
     </div>
 
     <!-- Hero Section -->
-     <section id="hero">
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <section id="hero">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-md-12 hero-tagline my-auto">
             <p>Halo, nama saya</p>
             <h1>Boy Aghnia Rifadhan</h1>
-            <p><span class="fw-bold">Lorem ipsum dolor</span>, sit amet consectetur adipisicing elit. A laboriosam vero ea cupiditate nisi sunt aut et excepturi cum saepe, laudantium nemo ipsum aspernatur obcaecati deleniti architecto doloribus repellat placeat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat delectus est ab ad quis, repellendus modi animi impedit aspernatur error iste explicabo et sequi ut iusto odio aliquam? Error, perferendis?</p>
+            <p>
+              <span class="fw-bold">Lorem ipsum dolor</span>, sit amet
+              consectetur adipisicing elit. A laboriosam vero ea cupiditate nisi
+              sunt aut et excepturi cum saepe, laudantium nemo ipsum aspernatur
+              obcaecati deleniti architecto doloribus repellat placeat? Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+              delectus est ab ad quis, repellendus modi animi impedit aspernatur
+              error iste explicabo et sequi ut iusto odio aliquam? Error,
+              perferendis?
+            </p>
             <div class="button-hero">
-            <a href="#about" class="button-primary2">
-              <div class="button-inner">
-                <div class="progress-mask"></div>
-                <div class="text-block">About Me</div>
-              </div>
-            </a>
+              <a href="#about" class="button-primary2">
+                <div class="button-inner">
+                  <div class="progress-mask"></div>
+                  <div class="text-block">About Me</div>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -108,15 +150,15 @@
           </div> -->
         </div>
       </div>
-     </section>
+    </section>
 
-     <!-- About Me Section -->
-     <section id="about">
+    <!-- About Me Section -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <section id="about">
       <div class="container h-100">
         <div class="row h-100">
-
           <div class="col-md-6 pasfoto my-auto">
-            <img src="pasfoto.jpg" alt="" class="foto">
+            <img src="pasfoto.jpg" alt="" class="foto" />
             <div class="rectangle"></div>
           </div>
 
@@ -125,184 +167,352 @@
               <h2>About Me</h2>
               <span></span>
             </div>
-            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquam aperiam tenetur accusantium dolor obcaecati quibusdam sit quaerat, voluptates id, possimus alias distinctio amet omnis quae magnam maiores totam. Ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam animi at accusantium fugiat cupiditate, quas quia optio commodi eaque atque impedit, repudiandae inventore veniam dicta alias error placeat. Ipsam, voluptatum.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ullam magni, pariatur, harum animi fuga id corporis praesentium eaque sapiente, iusto modi sit labore fugit? Quidem vero sequi voluptates quae! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi perspiciatis quis natus. Possimus delectus quae saepe sit, eos est exercitationem deserunt quidem neque quam ea cupiditate ipsum ab incidunt. Aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident voluptas ratione neque tempore odit sequi amet accusamus suscipit ad deserunt iure recusandae omnis dolorum. At dicta nam ex facilis.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit aliquam aperiam tenetur accusantium dolor obcaecati
+              quibusdam sit quaerat, voluptates id, possimus alias distinctio
+              amet omnis quae magnam maiores totam. Ad. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quisquam animi at accusantium
+              fugiat cupiditate, quas quia optio commodi eaque atque impedit,
+              repudiandae inventore veniam dicta alias error placeat. Ipsam,
+              voluptatum.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              ullam magni, pariatur, harum animi fuga id corporis praesentium
+              eaque sapiente, iusto modi sit labore fugit? Quidem vero sequi
+              voluptates quae! Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Quasi perspiciatis quis natus. Possimus delectus
+              quae saepe sit, eos est exercitationem deserunt quidem neque quam
+              ea cupiditate ipsum ab incidunt. Aliquid? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quis, provident voluptas
+              ratione neque tempore odit sequi amet accusamus suscipit ad
+              deserunt iure recusandae omnis dolorum. At dicta nam ex facilis.
+            </p>
             <ul>
               <li>
-                <img src="logo/photoshop.png" alt="">
+                <img src="logo/photoshop.png" alt="" />
               </li>
               <li>
-                <img src="logo/illustrator.png" alt="">
+                <img src="logo/illustrator.png" alt="" />
               </li>
               <li>
-                <img src="logo/mikrotik.png" alt="">
+                <img src="logo/mikrotik.png" alt="" />
               </li>
               <li>
-                <img src="logo/blender.png" alt="">
+                <img src="logo/blender.png" alt="" />
               </li>
-            </ul> 
+            </ul>
           </div>
-
         </div>
       </div>
-     </section>
+    </section>
 
-
-     <!-- Thumbnail Overlay Certificate  -->
+    <!-- Thumbnail Overlay Certificate  -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <div class="overlay" id="overlay">
       <button class="close-btn" onclick="closeOverlay()">X</button>
       <button class="arrow arrow-left" onclick="prevImage()">❮</button>
-      <img id="overlayImage" src="" alt="Gambar Besar">
+      <img id="overlayImage" src="" alt="Gambar Besar" />
       <button class="arrow arrow-right" onclick="nextImage()">❯</button>
     </div>
 
-     <!-- Certificate -->
+    <!-- Certificate -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <section id="certificate">
-
       <div class="container h-100">
         <div class="box-certificate">
           <h2>Certificates</h2>
           <span class="garis-certificate"></span>
-          <img src="logo/arrow-right.svg" alt="">
+          <img src="logo/arrow-right.svg" alt="" />
         </div>
         <ul class="cards">
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/acp.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(0)">
-                      <p>Adobe Certified Professional in Graphic Design & Illustration Using Adobe Illustrator</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/coursera-graphicdesign.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(1)">
-                      <p>Coursera - Graphic Design</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/digitalent-jrgraphicdesign.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(2)">
-                      <p>Kominfo - Digitalent Scholarship - Goverment Transformation Academy - Junior Graphic Designer</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/linkedin-photoshop.png" alt="Thumbnail" class="thumbnail" onclick="openOverlay(3)">
-                      <p>LinkedIn Learning - Photoshop 2024 Essential Training</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/indonesianext.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(4)">
-                      <p>Top 1000 Certifications - 8th IndonesiaNEXT</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/rubrik-illustrator.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(5)">
-                      <p>Rubrik Grafis - Adobe Illustrator</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/digitalent-htmlcss.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(6)">
-                      <p>Kominfo - Digitalent Scholarship - Professional Academy - HTML, CSS & JavaScript</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/progate-3day.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(7)">
-                      <p>Progate - 3 Day Kreatif Workshop</p>
-                    </div>
-                </div>
-            </li>
-            <li class="card-certificate">
-                <div>
-                    <div class="card-content">
-                      <img src="asset/img/progate-webnodejs.jpg" alt="Thumbnail" class="thumbnail" onclick="openOverlay(8)">
-                      <p>Progate - Path Pengembangan Web (Node.js)</p>
-                    </div>
-                </div>
-            </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/acp.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(0)"
+                />
+                <p>
+                  Adobe Certified Professional in Graphic Design & Illustration
+                  Using Adobe Illustrator
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/coursera-graphicdesign.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(1)"
+                />
+                <p>Coursera - Graphic Design</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/digitalent-jrgraphicdesign.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(2)"
+                />
+                <p>
+                  Kominfo - Digitalent Scholarship - Goverment Transformation
+                  Academy - Junior Graphic Designer
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/linkedin-photoshop.png"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(3)"
+                />
+                <p>LinkedIn Learning - Photoshop 2024 Essential Training</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/indonesianext.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(4)"
+                />
+                <p>Top 1000 Certifications - 8th IndonesiaNEXT</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/rubrik-illustrator.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(5)"
+                />
+                <p>Rubrik Grafis - Adobe Illustrator</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/digitalent-htmlcss.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(6)"
+                />
+                <p>
+                  Kominfo - Digitalent Scholarship - Professional Academy -
+                  HTML, CSS & JavaScript
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/progate-3day.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(7)"
+                />
+                <p>Progate - 3 Day Kreatif Workshop</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-certificate">
+            <div>
+              <div class="card-content">
+                <img
+                  src="asset/img/progate-webnodejs.jpg"
+                  alt="Thumbnail"
+                  class="thumbnail"
+                  onclick="openOverlay(8)"
+                />
+                <p>Progate - Path Pengembangan Web (Node.js)</p>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
-    
     </section>
 
-     <!-- Timeline Section -->
-    <section id="timeline" style="background-color: var(--gray-900);">
+    <!-- Timeline Section -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <section id="timeline" style="background-color: var(--gray-900)">
       <div class="container py-5">
         <h2 class="text-center">Experience</h2>
         <div class="w-100">
-          <p class="text-center pb-5 w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis explicabo eligendi obcaecati a, impedit ad delectus! Quia voluptas esse voluptatem, itaque nobis, totam excepturi dicta ab perferendis, molestias qui.</p>
+          <p class="text-center pb-5 w-75 mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            perferendis explicabo eligendi obcaecati a, impedit ad delectus!
+            Quia voluptas esse voluptatem, itaque nobis, totam excepturi dicta
+            ab perferendis, molestias qui.
+          </p>
         </div>
         <div class="main-timeline-2">
           <div class="timeline-2 left-2">
             <div class="card">
               <div class="bungkus">
-                <img src="logo/kemenhub.png" class="card-img-top" alt="Responsive image">
+                <img
+                  src="logo/kemenhub.png"
+                  class="card-img-top"
+                  alt="Responsive image"
+                />
               </div>
               <div class="card-body p-4">
                 <!-- Konten Kementerian Perhubungan -->
-                <h5 class="fw-bold mb-1">Kementerian Perhubungan Republik Indonesia</h5>
-                <h5 class="fw-bold mb-2">Penyusun Bahan Hukum, Kehumasan & Publikasi</h5>
-                <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>Full Time | May 2024 - Present</p>
-                <p class="mb-4">Bertanggung jawab untuk membangun citra positif instansi dan organisasi melalui komunikasi yang efektif dengan publik, dan media, mencakup perencanaan dan pelaksanaan strategi komunikasi, pengelolaan media sosial, penyusunan laporan kegiatan, serta pembuatan konten publikasi yang menarik, relevan, dan informatif, untuk memperkuat citra organisasi.</p>
+                <h5 class="fw-bold mb-1">
+                  Kementerian Perhubungan Republik Indonesia
+                </h5>
+                <h5 class="fw-bold mb-2">
+                  Penyusun Bahan Hukum, Kehumasan & Publikasi
+                </h5>
+                <p class="text-muted mb-4">
+                  <i class="far fa-clock" aria-hidden="true"></i>Full Time | May
+                  2024 - Present
+                </p>
+                <p class="mb-4">
+                  Bertanggung jawab untuk membangun citra positif instansi dan
+                  organisasi melalui komunikasi yang efektif dengan publik, dan
+                  media, mencakup perencanaan dan pelaksanaan strategi
+                  komunikasi, pengelolaan media sosial, penyusunan laporan
+                  kegiatan, serta pembuatan konten publikasi yang menarik,
+                  relevan, dan informatif, untuk memperkuat citra organisasi.
+                </p>
                 <h5 class="fw-bold mb-2">Dokumentasi & Publikasi</h5>
-                <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>March 2023 - May 2024 | 1 Year 3 Months</p>
-                <p class="mb-4">Bertanggung jawab menciptakan desain visual yang efektif untuk media sosial, dokumentasi, dan publikasi, termasuk perancangan infografis, poster, dan banner yang mendukung tujuan komunikasi dan identitas Bandar Udara serta memastikan desain yang dihasilkan menarik, sesuai kebutuhan, jelas, dan konsisten.</p>
-                  <h5 class="fw-bold mb-2">Petugas Pertolongan Kecelakaan Penerbangan & Pemadam Kebakaran (PKP-PK)</h5>
-                <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>March 2022 - March 2023 | 1 Year 1 Months</p>
-                <p class="mb-0">Bertanggung jawab dalam mengelola dan melaksanakan berbagai tugas yang mendukung keberhasilan operasi pemadam kebakaran dan penyelamatan, meliputi pengoperasian kendaraan pendukung, pemeliharaan peralatan, serta pembuatan laporan yang berguna untuk evaluasi dan pengelolaan kegiatan.</p>
+                <p class="text-muted mb-4">
+                  <i class="far fa-clock" aria-hidden="true"></i>March 2023 -
+                  May 2024 | 1 Year 3 Months
+                </p>
+                <p class="mb-4">
+                  Bertanggung jawab menciptakan desain visual yang efektif untuk
+                  media sosial, dokumentasi, dan publikasi, termasuk perancangan
+                  infografis, poster, dan banner yang mendukung tujuan
+                  komunikasi dan identitas Bandar Udara serta memastikan desain
+                  yang dihasilkan menarik, sesuai kebutuhan, jelas, dan
+                  konsisten.
+                </p>
+                <h5 class="fw-bold mb-2">
+                  Petugas Pertolongan Kecelakaan Penerbangan & Pemadam Kebakaran
+                  (PKP-PK)
+                </h5>
+                <p class="text-muted mb-4">
+                  <i class="far fa-clock" aria-hidden="true"></i>March 2022 -
+                  March 2023 | 1 Year 1 Months
+                </p>
+                <p class="mb-0">
+                  Bertanggung jawab dalam mengelola dan melaksanakan berbagai
+                  tugas yang mendukung keberhasilan operasi pemadam kebakaran
+                  dan penyelamatan, meliputi pengoperasian kendaraan pendukung,
+                  pemeliharaan peralatan, serta pembuatan laporan yang berguna
+                  untuk evaluasi dan pengelolaan kegiatan.
+                </p>
               </div>
             </div>
           </div>
           <div class="timeline-2 right-2">
             <div class="card">
               <div class="bungkus">
-                <img src="logo/kemenag.png" class="card-img-top kemenag" alt="Responsive image">
+                <img
+                  src="logo/kemenag.png"
+                  class="card-img-top kemenag"
+                  alt="Responsive image"
+                />
               </div>
               <div class="card-body p-4">
                 <!-- Konten Kementerian Agama -->
-                <h5 class="fw-bold mb-1">Kementerian Agama Republik Indonesia</h5>
-                <h5 class="fw-bold mb-2">Tenaga Terampil Pengelolaan Informasi dan Publikasi Pendidikan Agama Islam</h5>
-                <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>Contract | January 2018 - February 2022 | 4 Years 2 Months</p>
-                <p class="mb-0">Bertanggung jawab sebagai admin SIAGA (Sistem Informasi dan Administrasi Guru Agama) pada Seksi Pendidikan Agama Islam Kantor Kementerian Agama Kab. Ciamis, serta melaksanakan proses verifikasi dan validasi berkas kelengkapan pembayaran tunjangan profesi Guru Pendidikan Agama Islam termasuk menghitung, melaporkan realisasi penyerapan anggaran, serta merencanakan kebutuhan anggaran untuk pembayaran tunjangan profesi Guru Pendidikan Agama Islam dan juga membantu mengelola data kegiatan Seksi Pendidikan Agama Islam dalam bentuk tampilan informasi sebagai bahan publikasi.</p>
+                <h5 class="fw-bold mb-1">
+                  Kementerian Agama Republik Indonesia
+                </h5>
+                <h5 class="fw-bold mb-2">
+                  Tenaga Terampil Pengelolaan Informasi dan Publikasi Pendidikan
+                  Agama Islam
+                </h5>
+                <p class="text-muted mb-4">
+                  <i class="far fa-clock" aria-hidden="true"></i>Contract |
+                  January 2018 - February 2022 | 4 Years 2 Months
+                </p>
+                <p class="mb-0">
+                  Bertanggung jawab sebagai admin SIAGA (Sistem Informasi dan
+                  Administrasi Guru Agama) pada Seksi Pendidikan Agama Islam
+                  Kantor Kementerian Agama Kab. Ciamis, serta melaksanakan
+                  proses verifikasi dan validasi berkas kelengkapan pembayaran
+                  tunjangan profesi Guru Pendidikan Agama Islam termasuk
+                  menghitung, melaporkan realisasi penyerapan anggaran, serta
+                  merencanakan kebutuhan anggaran untuk pembayaran tunjangan
+                  profesi Guru Pendidikan Agama Islam dan juga membantu
+                  mengelola data kegiatan Seksi Pendidikan Agama Islam dalam
+                  bentuk tampilan informasi sebagai bahan publikasi.
+                </p>
               </div>
             </div>
           </div>
           <div class="timeline-2 left-2">
             <div class="card">
               <div class="bungkus">
-                <img src="logo/sas-hospitality.jpg" class="card-img-top sas-hospitality" alt="Responsive image">
+                <img
+                  src="logo/sas-hospitality.jpg"
+                  class="card-img-top sas-hospitality"
+                  alt="Responsive image"
+                />
               </div>
               <div class="card-body p-4">
                 <!-- Konten SAS Hospitality -->
                 <h5 class="fw-bold mb-1">SAS Hospitality</h5>
-                <h5 class="fw-bold mb-2">Public Area Attendant & Room Attendant</h5>
-                <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>Freelance | May 2017 - December 2017 | 10 Months</p>
-                <p class="mb-4">Bertanggung jawab untuk memastikan kebersihan dan kenyamanan di area publik dan kamar tamu hotel, meliputi perawatan rutin area publik, pembersihan kamar tamu, serta memastikan standar kebersihan dan keselamatan yang tinggi untuk menciptakan pengalaman menginap yang menyenangkan bagi para tamu.</p>
+                <h5 class="fw-bold mb-2">
+                  Public Area Attendant & Room Attendant
+                </h5>
+                <p class="text-muted mb-4">
+                  <i class="far fa-clock" aria-hidden="true"></i>Freelance | May
+                  2017 - December 2017 | 10 Months
+                </p>
+                <p class="mb-4">
+                  Bertanggung jawab untuk memastikan kebersihan dan kenyamanan
+                  di area publik dan kamar tamu hotel, meliputi perawatan rutin
+                  area publik, pembersihan kamar tamu, serta memastikan standar
+                  kebersihan dan keselamatan yang tinggi untuk menciptakan
+                  pengalaman menginap yang menyenangkan bagi para tamu.
+                </p>
                 <h5 class="fw-bold mb-2">Grand Tjokro Hotel Academy</h5>
-                <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>Internship | December 2016 - February 2017 | 3 Months</p>
-                <p class="mb-0">Sebagai peserta magang di Grand Tjokro Hotel Academy, saya mendapatkan pelatihan langsung di berbagai departemen operasional perhotelan, termasuk Front Office, Back Office, Housekeeping, Engineering, dan Food & Beverage. 
-                <br><br>
-                Saya terlibat dalam kegiatan seperti penyambutan tamu, pengelolaan kebersihan kamar, serta pelayanan makanan dan minuman. Selain itu, saya juga dilatih dalam komunikasi dengan tamu, penanganan keluhan, dan penerapan prosedur pelayanan standar hotel, yang memperkaya keterampilan teknis dan interpersonal saya untuk karir di industri perhotelan.</p>
+                <p class="text-muted mb-4">
+                  <i class="far fa-clock" aria-hidden="true"></i>Internship |
+                  December 2016 - February 2017 | 3 Months
+                </p>
+                <p class="mb-0">
+                  Sebagai peserta magang di Grand Tjokro Hotel Academy, saya
+                  mendapatkan pelatihan langsung di berbagai departemen
+                  operasional perhotelan, termasuk Front Office, Back Office,
+                  Housekeeping, Engineering, dan Food & Beverage. <br /><br />
+                  Saya terlibat dalam kegiatan seperti penyambutan tamu,
+                  pengelolaan kebersihan kamar, serta pelayanan makanan dan
+                  minuman. Selain itu, saya juga dilatih dalam komunikasi dengan
+                  tamu, penanganan keluhan, dan penerapan prosedur pelayanan
+                  standar hotel, yang memperkaya keterampilan teknis dan
+                  interpersonal saya untuk karir di industri perhotelan.
+                </p>
               </div>
             </div>
           </div>
@@ -310,139 +520,245 @@
       </div>
     </section>
 
-     <!-- Thumbnail Overlay Project  -->
-     <!-- <div class="overlay2" id="overlay2">
-      <button class="close-btn" onclick="closeOverlay2()">X</button>
-      <img id="overlayImage2" src="" alt="Gambar Besar">
-    </div> -->
-
     <div id="overlay2" class="overlay">
-      <img id="overlayImage2" src="" alt="Overlay Image">
+      <img id="overlayImage2" src="" alt="Overlay Image" />
       <span class="close-btn" onclick="closeOverlay2()">X</span>
     </div>
 
     <!-- Project Section -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <section id="project">
-        <div class="container h-100">
-          
-          <!-- Pembungkus Project 1 -->
-           <div class="box-project">
-            <h2>Project</h2>
-            <span class="garis-project"></span>
-           </div>
-          
-          <div class="row h-50 mb-5 project">
-              
-              <!-- Gambar Project 1 -->
-              <div class="col-md-6">
-                <div class="gambar-project-kiri">
-                  <img src="asset/img/topologi.jpg" alt="" onclick="openOverlay2(0)">
-                </div>
-              </div>
+      <div class="container h-100">
+        <!-- Pembungkus Project 1 -->
+        <div class="box-project">
+          <h2>Project</h2>
+          <span class="garis-project"></span>
+        </div>
 
-              <!-- Text Project 1 -->
-              <div class="col-md-6 my-auto text-pr-kanan">
-
-                <p class="mb-1">Kantor UPBU Kelas III Bade | August 2022 - Present</p>
-                <h5 class="fw-bold mb-4">Distribusi Jaringan Internet di Bandara Bade</h5>
-
-                <div class="text-project mb-4">
-                <p>Selain aktif menjadi Humas, saya juga terlibat dalam beberapa tugas sebagai <span>Network Administrator</span> di bawah pengawasan Ketua Tim Teknik, Operasi dan Pelayanan Darurat (TOKPD) dan Kepala Kantor Bandar Udara Bade. Saya <span>bertanggung jawab untuk melakukan instalasi, troubleshooting, perbaikan infrastruktur perangkat keras dan perangkat pendukung</span>, serta monitoring dan pemeliharaan jaringan agar konektivitas internet di Bandar Udara Bade dapat berfungsi dan berjalan dengan baik.</p>
-                </div>
-
-                <p> Network Administrator | Mikrotik, HTML, CSS, JavaScript</p>
-                <button>Learn More</button>
-
-              </div>
-            </div>
-
-
-            <!-- Pembungkus Project 2 -->
-            <div class="row h-50 mb-5 project">
-              <!-- Text Project 2 -->
-              <div class="col-md-6 my-auto text-pr-kiri">
-
-                <p class="mb-1">Kantor UPBU Kelas III Bade | March 2023 - Present</p>
-                <h5 class="fw-bold mb-4">Bade Airport Social Media Design</h5>
-
-                <div class="text-project mb-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rerum consequatur similique laboriosam, id eligendi corporis dolorem nobis, veniam numquam itaque. Ullam aliquam, sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, consequatur sint! Neque quisquam, maxime sit necessitatibus eius corporis est accusamus error officia harum nesciunt, perspiciatis id nulla, culpa quaerat ab.</p>
-                </div>
-
-                <p> Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
-                <button>Learn More</button>
-
-              </div>
-              
-              <!-- Gambar Project 2 -->
-              <div class="col-md-6">
-                <div class="gambar-project-kanan">
-                  <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(1)">
-                </div>
-              </div>
-            </div>
-            
-            <!-- Pembungkus Project 3 -->
-          <div class="row h-50 mb-5 project">
-            <!-- Gambar Project 3 -->
-            <div class="col-md-6">
-              <div class="gambar-project-kiri">
-                <img src="bonang.png" alt="">
-              </div>
-            </div>
-
-            <!-- Text Project 3 -->
-            <div class="col-md-6 my-auto text-pr-kanan">
-
-              <p class="mb-1">Kantor UPBU Kelas III Bade | August 2022 - Present</p>
-              <h5 class="fw-bold mb-4">Distribusi Jaringan Internet di Bandara Bade</h5>
-
-              <div class="text-project mb-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rerum consequatur similique laboriosam, id eligendi corporis dolorem nobis, veniam numquam itaque. Ullam aliquam, sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, consequatur sint! Neque quisquam, maxime sit necessitatibus eius corporis est accusamus error officia harum nesciunt, perspiciatis id nulla, culpa quaerat ab.</p>
-              </div>
-
-              <p> Network Administrator | Mikrotik, HTML, CSS, JavaScript</p>
-              <button>Learn More</button>
-
+        <div class="row h-50 mb-5 project">
+          <!-- Gambar Project 1 -->
+          <div class="col-md-6">
+            <div class="gambar-project-kiri">
+              <img
+                src="asset/img/topologi.jpg"
+                alt=""
+                onclick="openOverlay2(0)"
+              />
             </div>
           </div>
 
+          <!-- Text Project 1 -->
+          <div class="col-md-6 my-auto text-pr-kanan">
+            <p class="mb-1">
+              Kantor UPBU Kelas III Bade | August 2022 - Present
+            </p>
+            <h5 class="fw-bold mb-4">
+              Distribusi Jaringan Internet di Bandara Bade
+            </h5>
+
+            <div class="text-project mb-4">
+              <p>
+                Selain aktif menjadi Humas, saya juga terlibat dalam beberapa
+                tugas sebagai <span>Network Administrator</span> di bawah
+                pengawasan Ketua Tim Teknik, Operasi dan Pelayanan Darurat
+                (TOKPD) dan Kepala Kantor Bandar Udara Bade. Saya
+                <span
+                  >bertanggung jawab untuk melakukan instalasi, troubleshooting,
+                  perbaikan infrastruktur perangkat keras dan perangkat
+                  pendukung</span
+                >, serta monitoring dan pemeliharaan jaringan agar konektivitas
+                internet di Bandar Udara Bade dapat berfungsi dan berjalan
+                dengan baik.
+              </p>
+            </div>
+
+            <p>Network Administrator | Mikrotik, HTML, CSS, JavaScript</p>
+            <button>Learn More</button>
           </div>
         </div>
+
+        <!-- Pembungkus Project 2 -->
+        <div class="row h-50 mb-5 project">
+          <!-- Text Project 2 -->
+          <div class="col-md-6 my-auto text-pr-kiri">
+            <p class="mb-1">
+              Kantor UPBU Kelas III Bade | March 2023 - Present
+            </p>
+            <h5 class="fw-bold mb-4">Bade Airport Social Media Design</h5>
+
+            <div class="text-project mb-4">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus rerum consequatur similique laboriosam, id eligendi
+                corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
+                sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Cum, consequatur
+                sint! Neque quisquam, maxime sit necessitatibus eius corporis
+                est accusamus error officia harum nesciunt, perspiciatis id
+                nulla, culpa quaerat ab.
+              </p>
+            </div>
+
+            <p>Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
+            <button>Learn More</button>
+          </div>
+
+          <!-- Gambar Project 2 -->
+          <div class="col-md-6">
+            <div class="gambar-project-kanan">
+              <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(1)" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Pembungkus Project 3 -->
+        <div class="row h-50 mb-5 project">
+          <!-- Gambar Project 3 -->
+          <div class="col-md-6">
+            <div class="gambar-project-kiri">
+              <img src="bonang.png" alt="" onclick="openOverlay2(2)" />
+            </div>
+          </div>
+
+          <!-- Text Project 3 -->
+          <div class="col-md-6 my-auto text-pr-kanan">
+            <p class="mb-1">
+              Kantor UPBU Kelas III Bade | August 2022 - Present
+            </p>
+            <h5 class="fw-bold mb-4">
+              Distribusi Jaringan Internet di Bandara Bade
+            </h5>
+
+            <div class="text-project mb-4">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus rerum consequatur similique laboriosam, id eligendi
+                corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
+                sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Cum, consequatur
+                sint! Neque quisquam, maxime sit necessitatibus eius corporis
+                est accusamus error officia harum nesciunt, perspiciatis id
+                nulla, culpa quaerat ab.
+              </p>
+            </div>
+
+            <p>Network Administrator | Mikrotik, HTML, CSS, JavaScript</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+
+        <!-- Pembungkus Project 4 -->
+        <div class="row h-50 mb-5 project">
+          <!-- Text Project 4 -->
+          <div class="col-md-6 my-auto text-pr-kiri">
+            <p class="mb-1">
+              Kantor UPBU Kelas III Bade | March 2023 - Present
+            </p>
+            <h5 class="fw-bold mb-4">Bade Airport Social Media Design</h5>
+
+            <div class="text-project mb-4">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus rerum consequatur similique laboriosam, id eligendi
+                corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
+                sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Cum, consequatur
+                sint! Neque quisquam, maxime sit necessitatibus eius corporis
+                est accusamus error officia harum nesciunt, perspiciatis id
+                nulla, culpa quaerat ab.
+              </p>
+            </div>
+
+            <p>Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
+            <button>Learn More</button>
+          </div>
+
+          <!-- Gambar Project 4 -->
+          <div class="col-md-6">
+            <div class="gambar-project-kanan">
+              <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(3)" />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section id="contact">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-md-12 my-auto mx-auto text-center align-middle">
+            <div class="text-contact">
+              <h1>Get In Touch</h1>
+              <span class="d-inline-block w-50 mb-3"
+                >Although I'm not currently looking for any new opportunities,
+                my inbox is always open. Whether you have a question or just
+                want to say hi, I'll try my best to get back to you!</span
+              >
+            </div>
 
+            <div class="btn-contact">
+              <button class="button-primary mx-auto">Let's Talk</button>
+            </div>
+          </div>
+        </div>
 
+        <!-- <div class="col-md-6 hero-tagline my-auto">
+            <img src="Untitled-3.jpg" alt="">
+          </div> -->
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <footer class="footer container w-100">
+      <div class="footer-copyright">
+        <div class="copyright-atas">
+          <span>Designed & Developed by </span>
+        </div>
+        <div class="copyright-bawah">
+          <span>Boy Aghnia Rifadhan</span>
+        </div>
+      </div>
 
+      <span class="garis-footer"></span>
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="footer-sosmed">
+        <ul>
+          <li>
+            <a
+              href="https://instagram.com/boyaghnia"
+              target="_blank"
+              id="instagram"
+            ></a
+            ><i data-feather="instagram"></i>
+          </li>
+          <li><a href="#" id="youtube"></a><i data-feather="youtube"></i></li>
+          <li>
+            <a
+              href="https://linkedin.com/in/boyaghnia"
+              target="_blank"
+              id="linkedin"
+            ></a
+            ><i data-feather="linkedin"></i>
+          </li>
+          <li><a href="#" id="github"></a><i data-feather="github"></i></li>
+        </ul>
+      </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
 
     <!-- Bootstrap JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Feather Icons -->
     <script>
       feather.replace();
     </script>
-
-    
   </body>
 </html>

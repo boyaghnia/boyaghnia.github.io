@@ -63,4 +63,4 @@ git push
 
 
 
-Setiap kali kamu membuat perubahan, cukup lakukan langkah git add, git commit, dan git push untuk mempegitrbarui repositori GitHub.
+Setiap kali kamu membuat perubahan, cukup lakukan langkah git add, git commit, dan git push untuk memperbarui repositori GitHub.

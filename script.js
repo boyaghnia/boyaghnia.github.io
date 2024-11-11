@@ -171,3 +171,32 @@ function handleScroll() {
 
 // Tambahkan event listener untuk mendeteksi scroll pada elemen .cards
 cardsElement.addEventListener("scroll", handleScroll);
+
+// window.addEventListener("load", function () {
+//   // Menyembunyikan preloader setelah halaman selesai dimuat
+//   const preloader = document.getElementById("preloader");
+//   const content = document.getElementById("content");
+
+//   // Hapus preloader dan tampilkan konten
+//   preloader.style.display = "none";
+//   content.style.display = "block";
+// });
+
+window.addEventListener("load", function () {
+  // Menambahkan kelas 'no-scroll' untuk mencegah scroll saat preloader muncul
+  document.body.classList.add("no-scroll");
+
+  // Simulasi waktu loading (4 detik)
+  setTimeout(function () {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("hero");
+
+    // Menyembunyikan preloader dan menampilkan konten
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+    content.style.display = "block";
+
+    // Menghapus kelas 'no-scroll' agar scroll dapat berfungsi
+    document.body.classList.remove("no-scroll");
+  }, 4000); // Durasi 4 detik
+});
