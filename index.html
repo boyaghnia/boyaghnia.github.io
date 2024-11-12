@@ -14,6 +14,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -32,9 +35,9 @@
   <body>
     <!-- Preloader -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <div id="preloader">
+    <!-- <div id="preloader">
       <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Navbar -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
@@ -125,7 +128,7 @@
           <div class="col-md-12 hero-tagline my-auto">
             <p>Halo, nama saya</p>
             <h1>Boy Aghnia Rifadhan</h1>
-            <p>
+            <p class="text-animation1">
               <span class="fw-bold">Lorem ipsum dolor</span>, sit amet
               consectetur adipisicing elit. A laboriosam vero ea cupiditate nisi
               sunt aut et excepturi cum saepe, laudantium nemo ipsum aspernatur
@@ -169,27 +172,31 @@
             </div>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit aliquam aperiam tenetur accusantium dolor obcaecati
-              quibusdam sit quaerat, voluptates id, possimus alias distinctio
-              amet omnis quae magnam maiores totam. Ad. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Quisquam animi at accusantium
-              fugiat cupiditate, quas quia optio commodi eaque atque impedit,
-              repudiandae inventore veniam dicta alias error placeat. Ipsam,
-              voluptatum.
-            </p>
+              Halo, nama saya <span>Boy Aghnia Rifadhan</span>. Saya adalah
+              seorang <span>Pegawai Negeri Sipil (PNS)</span> aktif di
+              <span>Kementerian Perhubungan</span> dan saat ini
+              <span
+                >menjabat sebagai Penyusun Bahan Hukum, Kehumasan dan
+                Publikasi</span
+              >
+              di Kantor UPBU Kelas III Bade, Kabupaten Mappi, Papua Selatan.<br />
+              <br />
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              ullam magni, pariatur, harum animi fuga id corporis praesentium
-              eaque sapiente, iusto modi sit labore fugit? Quidem vero sequi
-              voluptates quae! Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Quasi perspiciatis quis natus. Possimus delectus
-              quae saepe sit, eos est exercitationem deserunt quidem neque quam
-              ea cupiditate ipsum ab incidunt. Aliquid? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Quis, provident voluptas
-              ratione neque tempore odit sequi amet accusamus suscipit ad
-              deserunt iure recusandae omnis dolorum. At dicta nam ex facilis.
+              Saya juga seorang
+              <span>profesional yang berpengalaman dalam Desain Grafis</span>
+              dan memiliki ketertarikan dalam bidang
+              <span>Network Administrator serta Web Development</span>. Beberapa
+              proyek yang telah saya kerjakan mencakup tiga bidang utama ini,
+              memadukan kemampuan teknis dan kreativitas untuk menghasilkan
+              solusi inovatif dan efisien.
+              <span
+                >Saya percaya bahwa penguasaan multidisiplin sangat penting
+                dalam mendukung tugas dan tanggung jawab saya</span
+              >, dan saya selalu berusaha untuk terus mengembangkan keterampilan
+              saya guna memberikan kontribusi yang maksimal dalam setiap peran
+              yang saya emban.<br />
+              <br />
+              Skills :
             </p>
             <ul>
               <li>
@@ -538,7 +545,12 @@
         <div class="row h-50 mb-5 project">
           <!-- Gambar Project 1 -->
           <div class="col-md-6">
-            <div class="gambar-project-kiri">
+            <div
+              class="gambar-project-kiri"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+            >
               <img
                 src="asset/img/topologi.jpg"
                 alt=""
@@ -604,7 +616,12 @@
           </div>
 
           <!-- Gambar Project 2 -->
-          <div class="col-md-6">
+          <div
+            class="col-md-6"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"
+          >
             <div class="gambar-project-kanan">
               <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(1)" />
             </div>
@@ -614,7 +631,12 @@
         <!-- Pembungkus Project 3 -->
         <div class="row h-50 mb-5 project">
           <!-- Gambar Project 3 -->
-          <div class="col-md-6">
+          <div
+            class="col-md-6"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"
+          >
             <div class="gambar-project-kiri">
               <img src="bonang.png" alt="" onclick="openOverlay2(2)" />
             </div>
@@ -674,7 +696,12 @@
           </div>
 
           <!-- Gambar Project 4 -->
-          <div class="col-md-6">
+          <div
+            class="col-md-6"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"
+          >
             <div class="gambar-project-kanan">
               <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(3)" />
             </div>
@@ -745,6 +772,12 @@
         </ul>
       </div>
     </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

@@ -376,6 +376,16 @@ body h2 {
   width: 150px;
 }
 
+.about-me p span {
+  font-weight: 600;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.about-me p:hover span {
+  color: var(--red-900);
+}
+
 .about-me ul {
   list-style: none;
   display: flex;
