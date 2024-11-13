@@ -35,9 +35,15 @@
   <body>
     <!-- Preloader -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <!-- <div id="preloader">
-      <div class="loader"></div>
-    </div> -->
+    <div id="preloader">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
 
     <!-- Navbar -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
@@ -49,8 +55,8 @@
             alt="logo"
             width="30"
             class="d-inline-block me-3"
-          />Portfolio</a
-        >
+          />Portfolio
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -128,7 +134,7 @@
           <div class="col-md-12 hero-tagline my-auto">
             <p>Halo, nama saya</p>
             <h1>Boy Aghnia Rifadhan</h1>
-            <p class="text-animation1">
+            <p>
               <span class="fw-bold">Lorem ipsum dolor</span>, sit amet
               consectetur adipisicing elit. A laboriosam vero ea cupiditate nisi
               sunt aut et excepturi cum saepe, laudantium nemo ipsum aspernatur
@@ -199,7 +205,15 @@
               Skills :
             </p>
             <ul>
-              <li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Blender</li>
+              <li>Mikrotik</li>
+              <li>WinBox</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <!-- <li>
                 <img src="logo/photoshop.png" alt="" />
               </li>
               <li>
@@ -211,6 +225,15 @@
               <li>
                 <img src="logo/blender.png" alt="" />
               </li>
+              <li>
+                <img src="logo/html.png" alt="" />
+              </li>
+              <li>
+                <img src="logo/css.png" alt="" />
+              </li>
+              <li>
+                <img src="logo/javascript.png" alt="" />
+              </li> -->
             </ul>
           </div>
         </div>
@@ -368,7 +391,7 @@
 
     <!-- Timeline Section -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <section id="timeline" style="background-color: var(--gray-900)">
+    <section id="timeline">
       <div class="container py-5">
         <h2 class="text-center">Experience</h2>
         <div class="w-100">
@@ -477,52 +500,6 @@
               </div>
             </div>
           </div>
-          <div class="timeline-2 left-2">
-            <div class="card">
-              <div class="bungkus">
-                <img
-                  src="logo/sas-hospitality.jpg"
-                  class="card-img-top sas-hospitality"
-                  alt="Responsive image"
-                />
-              </div>
-              <div class="card-body p-4">
-                <!-- Konten SAS Hospitality -->
-                <h5 class="fw-bold mb-1">SAS Hospitality</h5>
-                <h5 class="fw-bold mb-2">
-                  Public Area Attendant & Room Attendant
-                </h5>
-                <p class="text-muted mb-4">
-                  <i class="far fa-clock" aria-hidden="true"></i>Freelance | May
-                  2017 - December 2017 | 10 Months
-                </p>
-                <p class="mb-4">
-                  Bertanggung jawab untuk memastikan kebersihan dan kenyamanan
-                  di area publik dan kamar tamu hotel, meliputi perawatan rutin
-                  area publik, pembersihan kamar tamu, serta memastikan standar
-                  kebersihan dan keselamatan yang tinggi untuk menciptakan
-                  pengalaman menginap yang menyenangkan bagi para tamu.
-                </p>
-                <h5 class="fw-bold mb-2">Grand Tjokro Hotel Academy</h5>
-                <p class="text-muted mb-4">
-                  <i class="far fa-clock" aria-hidden="true"></i>Internship |
-                  December 2016 - February 2017 | 3 Months
-                </p>
-                <p class="mb-0">
-                  Sebagai peserta magang di Grand Tjokro Hotel Academy, saya
-                  mendapatkan pelatihan langsung di berbagai departemen
-                  operasional perhotelan, termasuk Front Office, Back Office,
-                  Housekeeping, Engineering, dan Food & Beverage. <br /><br />
-                  Saya terlibat dalam kegiatan seperti penyambutan tamu,
-                  pengelolaan kebersihan kamar, serta pelayanan makanan dan
-                  minuman. Selain itu, saya juga dilatih dalam komunikasi dengan
-                  tamu, penanganan keluhan, dan penerapan prosedur pelayanan
-                  standar hotel, yang memperkaya keterampilan teknis dan
-                  interpersonal saya untuk karir di industri perhotelan.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -538,8 +515,15 @@
       <div class="container h-100">
         <!-- Pembungkus Project 1 -->
         <div class="box-project">
-          <h2>Project</h2>
-          <span class="garis-project"></span>
+          <h2 class="text-center">Project</h2>
+          <div class="w-100">
+            <p class="text-center pb-5 w-75 mx-auto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              perferendis explicabo eligendi obcaecati a, impedit ad delectus!
+              Quia voluptas esse voluptatem, itaque nobis, totam excepturi dicta
+              ab perferendis, molestias qui.
+            </p>
+          </div>
         </div>
 
         <div class="row h-50 mb-5 project">
@@ -772,6 +756,57 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Vanta JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+    <script>
+      VANTA.TOPOLOGY({
+        el: "body",
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 0.5,
+        scaleMobile: 0.5,
+        backgroundColor: 0x161513,
+        color: 0xc03b3b,
+        color2: 0xffa500,
+        // backgroundAlpha controls the transparency of the background
+        backgroundAlpha: 0.9,
+        // points determines the number of points in the topology
+        points: 10.0,
+        showDots: true,
+        maxDistance: 20.0,
+        // spacing defines the spacing between points
+        spacing: 20.0,
+        showDots: false,
+        lineWidth: 1,
+      });
+    </script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "body",
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1,
+        scaleMobile: 1,
+        showDots: false,
+        backgroundColor: 0x161513,
+        color: 0xe94d35,
+        maxDistance: 25.0,
+        spacing: 15.0,
+        points: 15.0,
+      });
+    </script> -->
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
