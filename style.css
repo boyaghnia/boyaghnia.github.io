@@ -83,7 +83,7 @@ body h2 {
   font-size: 20px;
   display: flex;
   align-items: center;
-  margin-bottom: 7.5px;
+  color: white;
 }
 
 .navbar-brand img:hover {
@@ -175,8 +175,8 @@ body h2 {
 
 #scrollToTopBtn {
   position: fixed;
-  bottom: 70px; /* Jarak dari bagian bawah layar */
-  right: 80px; /* Jarak dari bagian kanan layar */
+  bottom: 30px; /* Jarak dari bagian bawah layar */
+  right: 30px; /* Jarak dari bagian kanan layar */
   padding: 10px 10px;
   font-size: 16px;
   background-color: transparent;
@@ -354,11 +354,26 @@ body h2 {
 /* --------------------------------------------------------------------------------------------------- */
 /* About Me */
 
+#about-cert {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #about {
-  /* background: var(--gray-900); */
-  height: 50vh;
+  height: 60vh;
   width: 100%;
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about:hover .foto {
+  filter: grayscale(0);
+}
+
+#about:hover .about-me p span {
+  color: var(--red-900);
 }
 
 .box-about {
@@ -376,6 +391,10 @@ body h2 {
   position: relative;
   border-bottom: 2px solid var(--red-900);
   width: 150px;
+}
+
+.about-me {
+  position: relative;
 }
 
 .about-me p {
@@ -419,34 +438,35 @@ body h2 {
 /* --------------------------------------------------------------------------------------------------- */
 /* Pas Foto */
 
-.rectangle {
-  border: 1px solid white;
-  border-radius: 2%;
-  width: 340px;
-  height: 340px;
+.pasfoto {
+  position: relative; /* Set container sebagai posisi referensi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle2 {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100vw;
+  height: 256px;
   z-index: 1;
-  position: relative;
-  left: 145px;
-  bottom: 190px;
+  background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in-out;
 }
 
 .foto {
-  scale: 89%;
-  border-radius: 2%;
+  z-index: 3; /* Lebih tinggi agar berada di atas #rectangle2 */
+  scale: 85%;
+  border-radius: 0%;
   opacity: 100%;
-  z-index: 2;
-  position: relative;
-  left: 145px;
-  top: 150px;
   filter: grayscale(1);
   transition: transform 0.5s ease-in-out;
 }
 
 .foto:hover {
   filter: grayscale(0);
-  position: relative;
-  transform: translate(10px, -10px);
 }
 
 .foto:hover ~ .rectangle {
@@ -459,9 +479,28 @@ body h2 {
 /* Certificate */
 
 #certificate {
-  /* background: var(--gray-900); */
   height: 40vh;
   width: 100%;
+  /* overflow-y: auto; Allow scrolling for responsive display */
+  position: relative;
+  bottom: 60px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #about-cert {
+    height: auto;
+  }
+
+  #about {
+    height: auto;
+    padding: 20px;
+  }
+
+  #certificate {
+    height: auto;
+    padding: 20px;
+  }
 }
 
 .garis-certificate {
@@ -479,7 +518,6 @@ body h2 {
 .box-certificate {
   display: flex;
   align-items: center;
-  margin-bottom: -35px;
   justify-content: space-between;
 }
 
@@ -509,9 +547,10 @@ body h2 {
   display: flex;
   padding: 25px 0px;
   list-style: none;
-  overflow-x: scroll;
-  -ms-scroll-snap-type: x mandatory;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
+  position: relative;
+  bottom: 30px;
 }
 
 .card-certificate {
@@ -525,6 +564,39 @@ body h2 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
   scroll-snap-align: start;
   transition: all 0.3s ease;
+}
+
+/* Adjust Card Widths Based on Screen Size */
+@media (min-width: 1100px) {
+  .card-certificate {
+    flex-basis: calc(25% - 60px) !important;
+  }
+}
+
+@media (min-width: 500px) {
+  .card-certificate {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card-certificate:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card-certificate {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .card-certificate {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card-certificate:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .card-content p {
@@ -1168,3 +1240,13 @@ body.no-scroll {
     -webkit-transform: scaleY(1);
   }
 }
+
+/* --------------------------------------------------------------------------------------------------- */
+/* Responsive 1400px */
+
+/* @media (min-width: 1400px) {
+  .navbar .container {
+    margin-left: 60px;
+    margin-right: 40px;
+  }
+} */
