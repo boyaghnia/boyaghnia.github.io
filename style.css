@@ -52,6 +52,21 @@ body h2 {
   line-height: 72px;
 }
 
+@media (max-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
+
+  body h2 {
+    font-size: 24px;
+    line-height: 52px;
+  }
+
+  body h5 {
+    font-size: 1rem;
+  }
+}
+
 /* --------------------------------------------------------------------------------------------------- */
 /* Navbar Style */
 
@@ -60,6 +75,7 @@ body h2 {
   transition: all 0.5s ease-in-out;
   opacity: 1;
   background: transparent;
+  width: 100vw !important;
 }
 
 .navbar-scroll-atas {
@@ -126,6 +142,82 @@ body h2 {
   text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .button-primary {
+    font-size: 14px;
+  }
+}
+
+/* Media query untuk layar max-width 1440px */
+@media (max-width: 1440px) {
+  .navbar-brand {
+    font-size: 18px; /* Sesuaikan ukuran font */
+  }
+
+  .nav-link {
+    font-size: 15px; /* Kurangi ukuran font untuk link */
+    margin: 0 10px; /* Kurangi margin antar link */
+  }
+
+  .button-primary {
+    font-size: 15px; /* Kurangi ukuran font tombol */
+    min-width: 100px; /* Sesuaikan ukuran tombol */
+    padding: 6px 20px; /* Kurangi padding tombol */
+  }
+
+  .navbar .container {
+    padding: 0 15px; /* Tambahkan padding untuk menyesuaikan dengan layar lebih kecil */
+  }
+}
+
+/* Media query untuk layar max-width 1024px */
+@media (max-width: 1024px) {
+  .navbar-brand {
+    font-size: 16px; /* Kurangi ukuran font untuk brand */
+  }
+
+  .nav-link {
+    font-size: 14px; /* Kurangi ukuran font untuk link */
+    margin: 0 8px; /* Kurangi margin antar link */
+  }
+
+  .button-primary {
+    font-size: 14px; /* Kurangi ukuran font tombol */
+    min-width: 90px; /* Sesuaikan ukuran tombol */
+    padding: 5px 15px; /* Kurangi padding tombol */
+  }
+
+  .navbar-toggler {
+    border-color: var(--white); /* Pastikan toggle tetap terlihat */
+  }
+
+  .navbar-toggler-icon {
+    width: 20px; /* Sesuaikan ukuran ikon toggle */
+    height: 20px;
+  }
+
+  /* Mengatur jarak antar elemen di navbar */
+  .navbar-nav {
+    margin: 0; /* Hapus margin */
+  }
+
+  .nav-item {
+    margin: 0 5px; /* Kurangi jarak antar item */
+  }
+
+  .navbar .container {
+    padding: 0 10px; /* Tambahkan padding lebih kecil */
+  }
+}
+
 /* --------------------------------------------------------------------------------------------------- */
 /* Social Media */
 
@@ -186,6 +278,21 @@ body h2 {
   opacity: 0; /* Dimulai dengan opacity 0 untuk disembunyikan */
   transition: opacity 0.5s ease, background-color 0.5s ease; /* Transisi untuk efek smooth */
   z-index: 3;
+}
+
+@media screen and (max-width: 1440px) {
+  #scrollToTopBtn {
+    right: 52px;
+    bottom: 33px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #scrollToTopBtn {
+    right: 52px;
+    bottom: 33px;
+    display: none;
+  }
 }
 
 #scrollToTopBtn.show {
@@ -351,6 +458,16 @@ body h2 {
   animation: slideInBackground 30s linear;
 }
 
+@media (max-width: 1024px) {
+  .hero-tagline h1 {
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  .hero-tagline p {
+    font-size: 14px;
+  }
+}
 /* --------------------------------------------------------------------------------------------------- */
 /* About Me */
 
@@ -366,6 +483,38 @@ body h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  #about {
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  #about-cert {
+    height: 240vh;
+  }
+
+  .about-me ul {
+    display: flex;
+    flex-wrap: wrap; /* Membuat elemen turun ke bawah jika melebihi ruang */
+    gap: 10px; /* Jarak antar elemen */
+    justify-content: start; /* Menjajarkan elemen ke kiri */
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-me ul li {
+    margin-left: 0 !important;
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
+    padding: 10px;
+    margin: 0;
+  }
+
+  .rectangle2 {
+    display: none;
+  }
 }
 
 #about:hover .foto {
@@ -391,10 +540,6 @@ body h2 {
   position: relative;
   border-bottom: 2px solid var(--red-900);
   width: 150px;
-}
-
-.about-me {
-  position: relative;
 }
 
 .about-me p {
@@ -435,6 +580,14 @@ body h2 {
   width: 35px;
 }
 
+#about.hover-effect .foto {
+  filter: grayscale(0);
+}
+
+#about.hover-effect .about-me p span {
+  color: var(--red-900);
+}
+
 /* --------------------------------------------------------------------------------------------------- */
 /* Pas Foto */
 
@@ -447,13 +600,19 @@ body h2 {
 
 .rectangle2 {
   position: absolute;
-  top: 12%;
+  top: 116.4%;
   left: 0;
   width: 100vw;
   height: 256px;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1440px) {
+  .rectangle2 {
+    top: 108.5%;
+  }
 }
 
 .foto {
@@ -481,9 +640,36 @@ body h2 {
 #certificate {
   height: 40vh;
   width: 100%;
-  /* overflow-y: auto; Allow scrolling for responsive display */
   position: relative;
-  bottom: 60px;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 1440px) {
+  #certificate {
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  #certificate {
+    height: 100vw;
+    position: unset;
+  }
+
+  .box-certificate img {
+    display: none;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden !important;
+  }
+
+  .card-certificate {
+    margin-bottom: 20px;
+    margin-right: 0 !important;
+  }
 }
 
 /* Responsiveness */
@@ -954,6 +1140,40 @@ body h2 {
   }
 }
 
+/* Hover effect untuk elemen kiri */
+.left-2.hover-effect::before {
+  border-color: transparent transparent transparent var(--red-900);
+}
+
+.left-2.hover-effect .card {
+  border-color: var(--red-600);
+}
+
+.left-2.hover-effect .bungkus img {
+  filter: grayscale(0);
+}
+
+.left-2.hover-effect h5 {
+  color: var(--red-600);
+}
+
+/* Hover effect untuk elemen kanan */
+.right-2.hover-effect::before {
+  border-color: transparent var(--red-900) transparent transparent;
+}
+
+.right-2.hover-effect .card {
+  border-color: var(--red-600);
+}
+
+.right-2.hover-effect .bungkus img {
+  filter: grayscale(0);
+}
+
+.right-2.hover-effect h5 {
+  color: var(--red-600);
+}
+
 /* --------------------------------------------------------------------------------------------------- */
 /* Project */
 
@@ -1242,11 +1462,3 @@ body.no-scroll {
 }
 
 /* --------------------------------------------------------------------------------------------------- */
-/* Responsive 1400px */
-
-/* @media (min-width: 1400px) {
-  .navbar .container {
-    margin-left: 60px;
-    margin-right: 40px;
-  }
-} */

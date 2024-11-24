@@ -22,22 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
 // Button Scroll Naik ---------------------------------------------------------------------------------
 
 // Menampilkan tombol saat halaman di-scroll
-window.onscroll = function () {
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    scrollToTopBtn.classList.add("show"); // Tambah kelas 'show' untuk menampilkan tombol
-  } else {
-    scrollToTopBtn.classList.remove("show"); // Hapus kelas 'show' untuk menyembunyikan tombol
-  }
-};
+// window.onscroll = function () {
+//   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+//   if (
+//     document.body.scrollTop > 100 ||
+//     document.documentElement.scrollTop > 100
+//   ) {
+//     scrollToTopBtn.classList.add("show"); // Tambah kelas 'show' untuk menampilkan tombol
+//   } else {
+//     scrollToTopBtn.classList.remove("show"); // Hapus kelas 'show' untuk menyembunyikan tombol
+//   }
+// };
 
-// Fungsi untuk scroll ke atas
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" }); // Gulir ke atas dengan efek smooth
-}
+// // Fungsi untuk scroll ke atas
+// function scrollToTop() {
+//   window.scrollTo({ top: 0, behavior: "smooth" }); // Gulir ke atas dengan efek smooth
+// }
 
 // Scroll Down ----------------------------------------------------------------------------------
 
@@ -192,3 +192,69 @@ cardsElement.addEventListener("scroll", handleScroll);
 //     document.body.classList.remove("no-scroll");
 //   }, 4000); // Durasi 4 detik
 // });
+
+// Aktifkan efek hover pada bagian "About" saat elemen terlihat --------------------------------
+
+const aboutSection = document.querySelector("#about");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        aboutSection.classList.add("hover-effect");
+      } else {
+        aboutSection.classList.remove("hover-effect");
+      }
+    });
+  },
+  { threshold: 0.9 } // Aktifkan jika 50% elemen terlihat
+);
+
+observer.observe(aboutSection);
+
+// Aktifkan efek hover pada bagian "Timeline" saat elemen terlihat --------------------------------
+
+const timelineLeftElements = document.querySelectorAll("#timeline .left-2");
+const timelineRightElements = document.querySelectorAll("#timeline .right-2");
+
+// Fungsi untuk menambahkan kelas hover-effect ke elemen tertentu
+const addHoverEffect = (element) => {
+  element.classList.add("hover-effect");
+};
+
+// Fungsi untuk menghapus kelas hover-effect dari elemen tertentu
+const removeHoverEffect = (element) => {
+  element.classList.remove("hover-effect");
+};
+
+// Intersection Observer untuk elemen kiri
+const leftObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        addHoverEffect(entry.target);
+      } else {
+        removeHoverEffect(entry.target);
+      }
+    });
+  },
+  { threshold: 0.9 } // Aktifkan jika 50% elemen terlihat
+);
+
+// Intersection Observer untuk elemen kanan
+const rightObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        addHoverEffect(entry.target);
+      } else {
+        removeHoverEffect(entry.target);
+      }
+    });
+  },
+  { threshold: 0.9 } // Aktifkan jika 50% elemen terlihat
+);
+
+// Observasi elemen kiri dan kanan
+timelineLeftElements.forEach((element) => leftObserver.observe(element));
+timelineRightElements.forEach((element) => rightObserver.observe(element));
