@@ -22,22 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
 // Button Scroll Naik ---------------------------------------------------------------------------------
 
 // Menampilkan tombol saat halaman di-scroll
-// window.onscroll = function () {
-//   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-//   if (
-//     document.body.scrollTop > 100 ||
-//     document.documentElement.scrollTop > 100
-//   ) {
-//     scrollToTopBtn.classList.add("show"); // Tambah kelas 'show' untuk menampilkan tombol
-//   } else {
-//     scrollToTopBtn.classList.remove("show"); // Hapus kelas 'show' untuk menyembunyikan tombol
-//   }
-// };
+window.onscroll = function () {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopBtn.classList.add("show"); // Tambah kelas 'show' untuk menampilkan tombol
+  } else {
+    scrollToTopBtn.classList.remove("show"); // Hapus kelas 'show' untuk menyembunyikan tombol
+  }
+};
 
-// // Fungsi untuk scroll ke atas
-// function scrollToTop() {
-//   window.scrollTo({ top: 0, behavior: "smooth" }); // Gulir ke atas dengan efek smooth
-// }
+// Fungsi untuk scroll ke atas
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" }); // Gulir ke atas dengan efek smooth
+}
 
 // Scroll Down ----------------------------------------------------------------------------------
 
@@ -207,7 +207,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.9 } // Aktifkan jika 50% elemen terlihat
+  { threshold: 0.5 } // Aktifkan jika 50% elemen terlihat
 );
 
 observer.observe(aboutSection);
@@ -238,7 +238,7 @@ const leftObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.9 } // Aktifkan jika 50% elemen terlihat
+  { threshold: 0.5 } // Aktifkan jika 50% elemen terlihat
 );
 
 // Intersection Observer untuk elemen kanan

@@ -47,7 +47,7 @@
 
     <!-- Navbar -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <nav class="navbar navbar-expand-lg mt-3 position-fixed w-100">
+    <nav class="navbar navbar-dark navbar-expand-lg mt-3 position-fixed w-100">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
@@ -113,9 +113,9 @@
 
     <!-- Button Naik -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <!-- <button id="scrollToTopBtn" onclick="scrollToTop()">
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
       <a href="#" id="arrow-up"></a><i data-feather="arrow-up"></i>
-    </button> -->
+    </button>
 
     <!-- Scroll Down -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
@@ -220,27 +220,6 @@
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
-                <!-- <li>
-                  <img src="logo/photoshop.png" alt="" />
-                </li>
-                <li>
-                  <img src="logo/illustrator.png" alt="" />
-                </li>
-                <li>
-                  <img src="logo/mikrotik.png" alt="" />
-                </li>
-                <li>
-                  <img src="logo/blender.png" alt="" />
-                </li>
-                <li>
-                  <img src="logo/html.png" alt="" />
-                </li>
-                <li>
-                  <img src="logo/css.png" alt="" />
-                </li>
-                <li>
-                  <img src="logo/javascript.png" alt="" />
-                </li> -->
               </ul>
             </div>
           </div>
@@ -399,7 +378,7 @@
     <!-- Timeline Section -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <section id="timeline">
-      <div class="container py-5">
+      <div class="container">
         <h2 class="text-center">Experience</h2>
         <div class="w-100">
           <p class="text-center pb-5 w-75 mx-auto">
@@ -520,11 +499,10 @@
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <section id="project">
       <div class="container h-100">
-        <!-- Pembungkus Project 1 -->
         <div class="box-project">
           <h2 class="text-center">Project</h2>
           <div class="w-100">
-            <p class="text-center pb-5 w-75 mx-auto">
+            <p class="text-center w-75 mx-auto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
               perferendis explicabo eligendi obcaecati a, impedit ad delectus!
               Quia voluptas esse voluptatem, itaque nobis, totam excepturi dicta
@@ -533,171 +511,205 @@
           </div>
         </div>
 
-        <div class="row h-50 mb-5 project">
-          <!-- Gambar Project 1 -->
-          <div class="col-md-6">
-            <div
-              class="gambar-project-kiri"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-sine"
-            >
-              <img
-                src="asset/img/topologi.jpg"
-                alt=""
-                onclick="openOverlay2(0)"
-              />
-            </div>
-          </div>
-
-          <!-- Text Project 1 -->
-          <div class="col-md-6 my-auto text-pr-kanan">
+        <!-- Pembungkus Project 1 -->
+        <div class="project-satu">
+          <div class="text-project-kanan pr-atas1">
             <p class="mb-1">
               Kantor UPBU Kelas III Bade | August 2022 - Present
             </p>
             <h5 class="fw-bold mb-4">
               Distribusi Jaringan Internet di Bandara Bade
             </h5>
+          </div>
 
-            <div class="text-project mb-4">
-              <p>
-                Selain aktif menjadi Humas, saya juga terlibat dalam beberapa
-                tugas sebagai <span>Network Administrator</span> di bawah
-                pengawasan Ketua Tim Teknik, Operasi dan Pelayanan Darurat
-                (TOKPD) dan Kepala Kantor Bandar Udara Bade. Saya
-                <span
-                  >bertanggung jawab untuk melakukan instalasi, troubleshooting,
-                  perbaikan infrastruktur perangkat keras dan perangkat
-                  pendukung</span
-                >, serta monitoring dan pemeliharaan jaringan agar konektivitas
-                internet di Bandar Udara Bade dapat berfungsi dan berjalan
-                dengan baik.
-              </p>
+          <div class="row h-50 mb-3 project">
+            <!-- Gambar Project 1 -->
+            <div class="col-md-6">
+              <div
+                class="gambar-project-kiri"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-sine"
+              >
+                <img
+                  src="asset/img/topologi.jpg"
+                  alt=""
+                  onclick="openOverlay2(0)"
+                />
+              </div>
             </div>
 
+            <!-- Text Project 1 -->
+            <div class="col-md-6 my-auto text-pr-kanan">
+              <div class="text-project mb-4">
+                <p>
+                  Selain aktif menjadi Humas, saya juga terlibat dalam beberapa
+                  tugas sebagai <span>Network Administrator</span> di bawah
+                  pengawasan Ketua Tim Teknik, Operasi dan Pelayanan Darurat
+                  (TOKPD) dan Kepala Kantor Bandar Udara Bade. Saya
+                  <span
+                    >bertanggung jawab untuk melakukan instalasi,
+                    troubleshooting, perbaikan infrastruktur perangkat keras dan
+                    perangkat pendukung</span
+                  >, serta monitoring dan pemeliharaan jaringan agar
+                  konektivitas internet di Bandar Udara Bade dapat berfungsi dan
+                  berjalan dengan baik.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-project-kanan pr-bawah1">
             <p>Network Administrator | Mikrotik, HTML, CSS, JavaScript</p>
-            <button>Learn More</button>
+            <button class="project-button">Learn More</button>
           </div>
         </div>
 
         <!-- Pembungkus Project 2 -->
-        <div class="row h-50 mb-5 project">
-          <!-- Text Project 2 -->
-          <div class="col-md-6 my-auto text-pr-kiri">
+        <div class="project-dua">
+          <div class="text-project-kiri pr-atas2">
             <p class="mb-1">
               Kantor UPBU Kelas III Bade | March 2023 - Present
             </p>
             <h5 class="fw-bold mb-4">Bade Airport Social Media Design</h5>
-
-            <div class="text-project mb-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus rerum consequatur similique laboriosam, id eligendi
-                corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
-                sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum
-                dolor, sit amet consectetur adipisicing elit. Cum, consequatur
-                sint! Neque quisquam, maxime sit necessitatibus eius corporis
-                est accusamus error officia harum nesciunt, perspiciatis id
-                nulla, culpa quaerat ab.
-              </p>
-            </div>
-
-            <p>Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
-            <button>Learn More</button>
           </div>
 
-          <!-- Gambar Project 2 -->
-          <div
-            class="col-md-6"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-sine"
-          >
-            <div class="gambar-project-kanan">
-              <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(1)" />
+          <div class="row h-50 mb-5 project">
+            <!-- Text Project 2 -->
+            <div class="col-md-6 my-auto text-pr-kiri">
+              <div class="text-project mb-4">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Delectus rerum consequatur similique laboriosam, id eligendi
+                  corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
+                  sed debitis distinctio sequi nobis doloremque alias? Lorem
+                  ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  consequatur sint! Neque quisquam, maxime sit necessitatibus
+                  eius corporis est accusamus error officia harum nesciunt,
+                  perspiciatis id nulla, culpa quaerat ab.
+                </p>
+              </div>
             </div>
+
+            <!-- Gambar Project 2 -->
+            <div
+              class="col-md-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+            >
+              <div class="gambar-project-kanan">
+                <img
+                  src="asset/img/bade.jpg"
+                  alt=""
+                  onclick="openOverlay2(1)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="text-project-kiri pr-bawah2">
+            <p>Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
+            <button class="project-button">Learn More</button>
           </div>
         </div>
 
         <!-- Pembungkus Project 3 -->
-        <div class="row h-50 mb-5 project">
-          <!-- Gambar Project 3 -->
-          <div
-            class="col-md-6"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-sine"
-          >
-            <div class="gambar-project-kiri">
-              <img src="bonang.png" alt="" onclick="openOverlay2(2)" />
-            </div>
-          </div>
-
-          <!-- Text Project 3 -->
-          <div class="col-md-6 my-auto text-pr-kanan">
+        <div class="project-tiga">
+          <div class="text-project-kanan pr-atas3">
             <p class="mb-1">
               Kantor UPBU Kelas III Bade | August 2022 - Present
             </p>
             <h5 class="fw-bold mb-4">
               Distribusi Jaringan Internet di Bandara Bade
             </h5>
+          </div>
 
-            <div class="text-project mb-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus rerum consequatur similique laboriosam, id eligendi
-                corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
-                sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum
-                dolor, sit amet consectetur adipisicing elit. Cum, consequatur
-                sint! Neque quisquam, maxime sit necessitatibus eius corporis
-                est accusamus error officia harum nesciunt, perspiciatis id
-                nulla, culpa quaerat ab.
-              </p>
+          <div class="row h-50 mb-5 project">
+            <!-- Gambar Project 3 -->
+            <div
+              class="col-md-6"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+            >
+              <div class="gambar-project-kiri">
+                <img src="bonang.png" alt="" onclick="openOverlay2(2)" />
+              </div>
             </div>
 
+            <!-- Text Project 3 -->
+            <div class="col-md-6 my-auto text-pr-kanan">
+              <div class="text-project mb-4">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Delectus rerum consequatur similique laboriosam, id eligendi
+                  corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
+                  sed debitis distinctio sequi nobis doloremque alias? Lorem
+                  ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  consequatur sint! Neque quisquam, maxime sit necessitatibus
+                  eius corporis est accusamus error officia harum nesciunt,
+                  perspiciatis id nulla, culpa quaerat ab.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-project-kanan pr-bawah3">
             <p>Network Administrator | Mikrotik, HTML, CSS, JavaScript</p>
-            <button>Learn More</button>
+            <button class="project-button">Learn More</button>
           </div>
         </div>
 
         <!-- Pembungkus Project 4 -->
-        <div class="row h-50 mb-5 project">
-          <!-- Text Project 4 -->
-          <div class="col-md-6 my-auto text-pr-kiri">
+        <div class="project-empat">
+          <div class="text-project-kiri pr-atas2">
             <p class="mb-1">
               Kantor UPBU Kelas III Bade | March 2023 - Present
             </p>
             <h5 class="fw-bold mb-4">Bade Airport Social Media Design</h5>
-
-            <div class="text-project mb-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus rerum consequatur similique laboriosam, id eligendi
-                corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
-                sed debitis distinctio sequi nobis doloremque alias? Lorem ipsum
-                dolor, sit amet consectetur adipisicing elit. Cum, consequatur
-                sint! Neque quisquam, maxime sit necessitatibus eius corporis
-                est accusamus error officia harum nesciunt, perspiciatis id
-                nulla, culpa quaerat ab.
-              </p>
-            </div>
-
-            <p>Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
-            <button>Learn More</button>
           </div>
 
-          <!-- Gambar Project 4 -->
-          <div
-            class="col-md-6"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-sine"
-          >
-            <div class="gambar-project-kanan">
-              <img src="asset/img/bade.jpg" alt="" onclick="openOverlay2(3)" />
+          <div class="row h-50 mb-5 project">
+            <!-- Text Project 4 -->
+            <div class="col-md-6 my-auto text-pr-kiri">
+              <div class="text-project mb-4">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Delectus rerum consequatur similique laboriosam, id eligendi
+                  corporis dolorem nobis, veniam numquam itaque. Ullam aliquam,
+                  sed debitis distinctio sequi nobis doloremque alias? Lorem
+                  ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  consequatur sint! Neque quisquam, maxime sit necessitatibus
+                  eius corporis est accusamus error officia harum nesciunt,
+                  perspiciatis id nulla, culpa quaerat ab.
+                </p>
+              </div>
             </div>
+
+            <!-- Gambar Project 4 -->
+            <div
+              class="col-md-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+            >
+              <div class="gambar-project-kanan">
+                <img
+                  src="asset/img/bade.jpg"
+                  alt=""
+                  onclick="openOverlay2(3)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="text-project-kiri pr-bawah2">
+            <p>Graphic Design | Adobe Photoshop, Lightroom, Illustrator</p>
+            <button class="project-button">Learn More</button>
           </div>
         </div>
+        <!-- Tutup Container Project -->
       </div>
     </section>
 

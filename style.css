@@ -2,6 +2,44 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+html,
+body {
+  overflow-x: hidden; /* Hilangkan scroll horizontal */
+}
+
+/* Kontainer Utama */
+.container {
+  max-width: 1300px; /* Batas maksimal lebar */
+  margin: 0 auto; /* Tengah secara horizontal */
+  padding: 0 16px; /* Spasi internal */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 900px; /* Kurangi lebar kontainer */
+  }
+}
+
+/* Gambar Responsif */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tabel Responsif */
+table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 :root {
   --white: white;
   --gray-100: #f2f1ef;
@@ -282,15 +320,21 @@ body h2 {
 
 @media screen and (max-width: 1440px) {
   #scrollToTopBtn {
-    right: 52px;
+    right: 35px;
     bottom: 33px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   #scrollToTopBtn {
-    right: 52px;
-    bottom: 33px;
+    right: 15px;
+    bottom: 15px;
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #scrollToTopBtn {
     display: none;
   }
 }
@@ -304,6 +348,7 @@ body h2 {
   color: var(--red-900);
 }
 
+/* --------------------------------------------------------------------------------------------------- */
 /* Scroll Down */
 
 .scroll-down {
@@ -618,7 +663,7 @@ body h2 {
 .foto {
   z-index: 3; /* Lebih tinggi agar berada di atas #rectangle2 */
   scale: 85%;
-  border-radius: 0%;
+  border-radius: 1%;
   opacity: 100%;
   filter: grayscale(1);
   transition: transform 0.5s ease-in-out;
@@ -689,6 +734,12 @@ body h2 {
   }
 }
 
+@media (max-width: 425px) {
+  .cards {
+    padding: 0 !important;
+  }
+}
+
 .garis-certificate {
   content: "";
   border-bottom: 2px solid var(--red-900);
@@ -736,7 +787,6 @@ body h2 {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   position: relative;
-  bottom: 30px;
 }
 
 .card-certificate {
@@ -986,6 +1036,12 @@ body h2 {
 
 .timeline-2:hover .right-2::before {
   border-color: transparent var(--red-900) transparent transparent;
+}
+
+@media (max-width: 425px) {
+  .main-timeline-2::after {
+    display: none;
+  }
 }
 
 .kemenag {
@@ -1249,8 +1305,13 @@ body h2 {
   z-index: 3;
 }
 
+.text-project {
+  margin-bottom: 0 !important;
+}
+
 .text-project p {
   padding: 15px;
+  margin-bottom: 0 !important;
 }
 
 .text-project span {
@@ -1263,7 +1324,7 @@ body h2 {
 .project .gambar-project-kanan {
   position: relative;
   width: 120%;
-  right: 124px;
+  right: 114px;
   height: auto;
   transition: all 0.5s ease;
 }
@@ -1273,7 +1334,7 @@ body h2 {
   z-index: 3;
 }
 
-.project button {
+.project-button {
   border: 1px solid var(--white);
   color: var(--white);
   text-align: center;
@@ -1285,10 +1346,190 @@ body h2 {
   transition: all 0.5s;
 }
 
-.project button:hover {
+.project-button:hover {
   background-color: var(--white);
   color: var(--red-900);
   text-decoration: underline;
+}
+
+.text-project-kanan {
+  text-align: end;
+}
+
+.text-project-kanan p {
+  margin-bottom: 1rem;
+}
+
+.text-project-kiri {
+  text-align: start;
+}
+
+.text-project-kiri p {
+  margin-bottom: 1rem;
+}
+
+.project-satu {
+  margin-bottom: -50px;
+}
+
+.project-dua {
+  margin-bottom: -100px;
+}
+
+.project-tiga {
+  margin-bottom: -95px;
+}
+
+.pr-atas1 {
+  position: relative;
+  top: 3rem;
+}
+
+.pr-bawah1 {
+  position: relative;
+  bottom: 2.5rem;
+}
+
+.pr-atas2 {
+  position: relative;
+  top: 4.5rem;
+}
+
+.pr-bawah2 {
+  position: relative;
+  bottom: 6rem;
+}
+
+.pr-atas3 {
+  position: relative;
+  top: 6.5rem;
+}
+
+.pr-bawah3 {
+  position: relative;
+  bottom: 8rem;
+}
+
+@media (max-width: 1440px) {
+  .pr-atas1 {
+    position: relative;
+    top: 2.8rem;
+  }
+
+  .pr-bawah1 {
+    position: relative;
+    bottom: 2.5rem;
+  }
+
+  .pr-atas3 {
+    position: relative;
+    top: 6.5rem;
+  }
+
+  .pr-bawah3 {
+    position: relative;
+    bottom: 8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pr-atas1 {
+    position: relative;
+    top: 1rem;
+  }
+
+  .pr-bawah1 {
+    position: relative;
+    bottom: 1rem;
+  }
+
+  .pr-atas2 {
+    position: relative;
+    top: 2.5rem;
+  }
+
+  .pr-bawah2 {
+    position: relative;
+    bottom: 4rem;
+  }
+
+  .pr-atas3 {
+    position: relative;
+    top: 4rem;
+  }
+
+  .pr-bawah3 {
+    position: relative;
+    bottom: 5.5rem;
+  }
+
+  .project .gambar-project-kanan {
+    right: 85px;
+  }
+}
+
+@media (max-width: 425px) {
+  .box-project {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 425px) {
+  .project {
+    flex-direction: column; /* Mengatur elemen menjadi vertikal */
+    margin-bottom: 0 !important;
+  }
+
+  .project .gambar-project-kiri,
+  .project .gambar-project-kanan {
+    width: 100%; /* Gambar memenuhi lebar penuh */
+    height: auto; /* Sesuaikan tinggi secara otomatis */
+    margin-bottom: 20px; /* Spasi antar elemen */
+    right: 0 !important;
+  }
+
+  .project-satu,
+  .project-dua,
+  .project-tiga,
+  .project-empat {
+    margin: 0 !important;
+    margin-bottom: 30px !important;
+  }
+
+  .text-project {
+    text-align: center;
+    padding: 10px; /* Mengurangi padding agar lebih rapi */
+  }
+
+  .text-project-kanan p,
+  .text-project-kiri p {
+    margin-bottom: 10px;
+  }
+
+  .text-pr-kiri {
+    margin-bottom: 20px !important;
+  }
+
+  .project-button {
+    display: inline-block;
+  }
+
+  .pr-atas1,
+  .pr-bawah1,
+  .pr-atas2,
+  .pr-bawah2,
+  .pr-atas3,
+  .pr-bawah3 {
+    position: static; /* Menghapus posisi relatif */
+    top: 0;
+    bottom: 0;
+    margin: 0 !important;
+  }
+
+  .pr-bawah1,
+  .pr-bawah3 {
+    margin-top: 20px !important;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------- */
@@ -1336,6 +1577,7 @@ body h2 {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
+  flex-direction: row; /* Default untuk desktop */
 }
 
 .footer-copyright {
@@ -1372,6 +1614,34 @@ body h2 {
 
 .footer-sosmed svg {
   margin: 5px;
+}
+
+@media (max-width: 425px) {
+  .footer {
+    flex-direction: column-reverse; /* Membalik urutan elemen */
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .garis-footer {
+    display: none;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-sosmed ul {
+    margin-left: 0;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .footer-sosmed ul li {
+    border: none;
+    margin: 0;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------- */
