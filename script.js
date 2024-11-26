@@ -1,3 +1,18 @@
+// Smooth Scroll ----------------------------------------------------------------------------------
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
+
 // Navbar Hidden ----------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -57,6 +72,7 @@ window.addEventListener("scroll", function () {
 // Thumbnail Overlay ----------------------------------------------------------------------------------
 
 // Array gambar besar
+// Certificates
 const crImages = [
   "asset/img/acp.jpg",
   "asset/img/coursera-graphicdesign.jpg",
@@ -70,6 +86,7 @@ const crImages = [
 ];
 let currentIndex = 0;
 
+// Project
 const prImages = ["asset/img/topologi.jpg", "asset/img/bade.jpg"];
 let prIndex = 0;
 
@@ -174,24 +191,24 @@ cardsElement.addEventListener("scroll", handleScroll);
 
 // Preloader ----------------------------------------------------------------------------------
 
-// window.addEventListener("load", function () {
-//   // Menambahkan kelas 'no-scroll' untuk mencegah scroll saat preloader muncul
-//   document.body.classList.add("no-scroll");
+window.addEventListener("load", function () {
+  // Menambahkan kelas 'no-scroll' untuk mencegah scroll saat preloader muncul
+  document.body.classList.add("no-scroll");
 
-//   // Simulasi waktu loading (4 detik)
-//   setTimeout(function () {
-//     const preloader = document.getElementById("preloader");
-//     const content = document.getElementById("hero");
+  // Simulasi waktu loading (4 detik)
+  setTimeout(function () {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("hero");
 
-//     // Menyembunyikan preloader dan menampilkan konten
-//     preloader.style.opacity = "0";
-//     preloader.style.visibility = "hidden";
-//     content.style.display = "block";
+    // Menyembunyikan preloader dan menampilkan konten
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+    content.style.display = "block";
 
-//     // Menghapus kelas 'no-scroll' agar scroll dapat berfungsi
-//     document.body.classList.remove("no-scroll");
-//   }, 4000); // Durasi 4 detik
-// });
+    // Menghapus kelas 'no-scroll' agar scroll dapat berfungsi
+    document.body.classList.remove("no-scroll");
+  }, 4000); // Durasi 4 detik
+});
 
 // Aktifkan efek hover pada bagian "About" saat elemen terlihat --------------------------------
 

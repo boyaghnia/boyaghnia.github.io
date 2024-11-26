@@ -35,7 +35,7 @@
   <body>
     <!-- Preloader -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <!-- <div id="preloader">
+    <div id="preloader">
       <div class="spinner">
         <div class="rect1"></div>
         <div class="rect2"></div>
@@ -43,11 +43,55 @@
         <div class="rect4"></div>
         <div class="rect5"></div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Navbar -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <nav class="navbar navbar-dark navbar-expand-lg mt-3 position-fixed w-100">
+
+    <nav class="navbar navbar-dark navbar-expand-md position-fixed w-100">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="logo2.png"
+            alt="logo"
+            width="30"
+            class="d-inline-block me-3"
+          />
+          Portfolio
+        </a>
+
+        <!-- Custom Hamburger Menu -->
+        <input
+          type="checkbox"
+          role="button"
+          aria-label="Display the menu"
+          class="menu"
+          id="menu-toggle"
+        />
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div>
+            <button class="button-primary">Resume</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <nav class="navbar navbar-dark navbar-expand-lg mt-3 position-fixed w-100">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
@@ -69,47 +113,26 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item mx-3">
+          <ul class="navbar-nav ms-auto text-end">
+            <li class="nav-item mx-2">
               <a class="nav-link" href="#hero">Home</a>
             </li>
-            <li class="nav-item mx-3">
+            <li class="nav-item mx-2">
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item mx-3">
+            <li class="nav-item mx-2">
               <a class="nav-link" href="#project">Project</a>
             </li>
-            <li class="nav-item mx-3">
+            <li class="nav-item mx-2">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-
-          <div>
+          <div class="mt-3 mt-lg-0">
             <button class="button-primary">Resume</button>
           </div>
         </div>
       </div>
-    </nav>
-
-    <!-- Social Media -->
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
-    <!-- <div class="sosmed">
-      <ul>
-          <li>
-            <a href="#" id="mail"></a><i data-feather="mail"></i>
-          </li>
-          <li>
-            <a href="#" id="instagram"></a><i data-feather="instagram"></i>
-          </li>
-          <li>
-            <a href="#" id="youtube"></a><i data-feather="youtube"></i>
-          </li>
-          <li>
-            <a href="#" id="linkedin"></a><i data-feather="linkedin"></i>
-          </li>
-        </ul> 
-        <span></span>  
-    </div> -->
+    </nav> -->
 
     <!-- Button Naik -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
@@ -153,10 +176,6 @@
               </a>
             </div>
           </div>
-
-          <!-- <div class="col-md-6 hero-tagline my-auto">
-            <img src="Untitled-3.jpg" alt="">
-          </div> -->
         </div>
       </div>
     </section>
@@ -165,12 +184,6 @@
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
     <section id="about-cert">
       <div id="about">
-        <!-- <div
-          class="rectangle2 my-auto"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-sine"
-        ></div> -->
         <div class="container h-100">
           <div class="row h-100">
             <div class="col-md-6 pasfoto my-auto">
@@ -731,10 +744,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="col-md-6 hero-tagline my-auto">
-            <img src="Untitled-3.jpg" alt="">
-          </div> -->
       </div>
     </section>
 
@@ -803,27 +812,6 @@
         spacing: 20.0,
         showDots: false,
         lineWidth: 1,
-      });
-    </script> -->
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script>
-      VANTA.NET({
-        el: "body",
-        mouseControls: false,
-        touchControls: false,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1,
-        scaleMobile: 1,
-        showDots: false,
-        backgroundColor: 0x161513,
-        color: 0xe94d35,
-        maxDistance: 25.0,
-        spacing: 15.0,
-        points: 15.0,
       });
     </script> -->
 
