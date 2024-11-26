@@ -74,15 +74,15 @@ window.addEventListener("scroll", function () {
 // Array gambar besar
 // Certificates
 const crImages = [
-  "asset/img/acp.jpg",
-  "asset/img/coursera-graphicdesign.jpg",
-  "asset/img/digitalent-jrgraphicdesign.jpg",
-  "asset/img/linkedin-photoshop.png",
-  "asset/img/indonesianext.jpg",
-  "asset/img/rubrik-illustrator.jpg",
-  "asset/img/digitalent-htmlcss.jpg",
-  "asset/img/progate-3day.jpg",
-  "asset/img/progate-webnodejs.jpg",
+  "asset/cert/acp.jpg",
+  "asset/cert/coursera-graphicdesign.jpg",
+  "asset/cert/digitalent-jrgraphicdesign.jpg",
+  "asset/cert/linkedin-photoshop.png",
+  "asset/cert/indonesianext.jpg",
+  "asset/cert/rubrik-illustrator.jpg",
+  "asset/cert/digitalent-htmlcss.jpg",
+  "asset/cert/progate-3day.jpg",
+  "asset/cert/progate-webnodejs.jpg",
 ];
 let currentIndex = 0;
 
@@ -275,3 +275,24 @@ const rightObserver = new IntersectionObserver(
 // Observasi elemen kiri dan kanan
 timelineLeftElements.forEach((element) => leftObserver.observe(element));
 timelineRightElements.forEach((element) => rightObserver.observe(element));
+
+// Efek Hover pada Project Item -------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projects = document.querySelectorAll(".project-item"); // Ganti selector sesuai dengan elemen Anda
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("hover-effect"); // Tambahkan efek hover
+        } else {
+          entry.target.classList.remove("hover-effect"); // Hilangkan efek jika keluar viewport
+        }
+      });
+    },
+    { threshold: 0.8 } // 50% elemen terlihat di viewport
+  );
+
+  projects.forEach((project) => observer.observe(project));
+});
