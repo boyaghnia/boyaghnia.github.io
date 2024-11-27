@@ -1573,12 +1573,12 @@ body h2 {
 
 .pr-atas3 {
   position: relative;
-  top: 6.5rem;
+  top: 4.5rem;
 }
 
 .pr-bawah3 {
   position: relative;
-  bottom: 8rem;
+  bottom: 6rem;
 }
 
 @media (max-width: 1440px) {
@@ -1594,12 +1594,76 @@ body h2 {
 
   .pr-atas3 {
     position: relative;
-    top: 6.5rem;
+    top: 4.5rem;
   }
 
   .pr-bawah3 {
     position: relative;
-    bottom: 8rem;
+    bottom: 6rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  .pr-atas1 {
+    position: relative;
+    top: 0.8rem;
+  }
+
+  .pr-bawah1 {
+    position: relative;
+    bottom: 0rem;
+  }
+
+  .pr-atas2 {
+    position: relative;
+    top: 3.5rem;
+  }
+
+  .pr-bawah2 {
+    position: relative;
+    bottom: 5rem;
+  }
+
+  .pr-atas3 {
+    position: relative;
+    top: 3.5rem;
+  }
+
+  .pr-bawah3 {
+    position: relative;
+    bottom: 4.5rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .pr-atas1 {
+    position: relative;
+    top: 0.8rem;
+  }
+
+  .pr-bawah1 {
+    position: relative;
+    bottom: 0rem;
+  }
+
+  .pr-atas2 {
+    position: relative;
+    top: 2.5rem;
+  }
+
+  .pr-bawah2 {
+    position: relative;
+    bottom: 3.8rem;
+  }
+
+  .pr-atas3 {
+    position: relative;
+    top: 2rem;
+  }
+
+  .pr-bawah3 {
+    position: relative;
+    bottom: 3.5rem;
   }
 }
 
@@ -1626,12 +1690,12 @@ body h2 {
 
   .pr-atas3 {
     position: relative;
-    top: 4rem;
+    top: 2rem;
   }
 
   .pr-bawah3 {
     position: relative;
-    bottom: 5.5rem;
+    bottom: 3.5rem;
   }
 
   .project .gambar-project-kanan {
@@ -1639,13 +1703,19 @@ body h2 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
+  #project .col-md-6 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 860px) {
   .box-project {
     margin-bottom: 25px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .project {
     flex-direction: column; /* Mengatur elemen menjadi vertikal */
     margin-bottom: 0 !important;

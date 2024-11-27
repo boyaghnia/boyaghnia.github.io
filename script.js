@@ -87,7 +87,11 @@ const crImages = [
 let currentIndex = 0;
 
 // Project
-const prImages = ["asset/img/topologi.jpg", "asset/img/bade.jpg"];
+const prImages = [
+  "asset/img/topologi.jpg",
+  "asset/img/bade.jpg",
+  "asset/img/asnbeasiswa.jpg",
+];
 let prIndex = 0;
 
 // Fungsi untuk membuka overlay dengan gambar tertentu
