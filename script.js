@@ -69,6 +69,30 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Hero Image Slider ----------------------------------------------------------------------------------
+
+// Pilih semua gambar dalam elemen .gambar-besar
+const images = document.querySelectorAll(".gambar-besar img");
+let HeroImage = 0; // Indeks gambar aktif
+
+// Fungsi untuk mengganti gambar
+function changeImage() {
+  // Hapus kelas "active" dari gambar saat ini
+  images[HeroImage].classList.remove("active");
+
+  // Pindah ke gambar berikutnya (loop kembali ke awal jika sudah di akhir)
+  HeroImage = (HeroImage + 1) % images.length;
+
+  // Tambahkan kelas "active" ke gambar berikutnya
+  images[HeroImage].classList.add("active");
+}
+
+// Mulai dengan gambar pertama
+images[HeroImage].classList.add("active");
+
+// Jalankan fungsi changeImage setiap 3 detik
+setInterval(changeImage, 6000);
+
 // Thumbnail Overlay ----------------------------------------------------------------------------------
 
 // Array gambar besar
@@ -199,7 +223,7 @@ window.addEventListener("load", function () {
   // Menambahkan kelas 'no-scroll' untuk mencegah scroll saat preloader muncul
   document.body.classList.add("no-scroll");
 
-  // Simulasi waktu loading (4 detik)
+  // Simulasi waktu loading (3 detik)
   setTimeout(function () {
     const preloader = document.getElementById("preloader");
     const content = document.getElementById("hero");
@@ -211,7 +235,7 @@ window.addEventListener("load", function () {
 
     // Menghapus kelas 'no-scroll' agar scroll dapat berfungsi
     document.body.classList.remove("no-scroll");
-  }, 4000); // Durasi 4 detik
+  }, 3000); // Durasi 3 detik
 });
 
 // Aktifkan efek hover pada bagian "About" saat elemen terlihat --------------------------------

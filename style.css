@@ -130,12 +130,12 @@ body h2 {
   z-index: 3;
   transition: all 0.5s ease-in-out;
   opacity: 1;
-  background: transparent;
+  background: rgba(22, 21, 19, 0.8);
   width: 100vw !important;
 }
 
 .navbar-scroll-atas {
-  background-color: rgba(22, 21, 19, 0.3);
+  background-color: rgba(22, 21, 19, 0.8);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   position: fixed;
@@ -290,7 +290,7 @@ body h2 {
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 100%;
     height: 100vh;
     background-color: rgba(
       22,
@@ -317,15 +317,6 @@ body h2 {
     text-align: center;
     margin-top: 20px;
   }
-}
-
-/* Mengatur ulang navbar */
-.navbar {
-  z-index: 3;
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
-  background: transparent;
-  width: 100vw !important;
 }
 
 /* Sembunyikan hamburger menu secara default */
@@ -491,7 +482,7 @@ body h2 {
 
 .scroll-down {
   position: fixed;
-  bottom: 15px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -548,15 +539,65 @@ body h2 {
   width: 100%;
 }
 
+.gambar-besar {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gambar-besar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0; /* Sembunyikan semua gambar secara default */
+  transition: opacity 1s ease-in-out; /* Animasi pergantian gambar */
+}
+
+.gambar-besar img.active {
+  opacity: 1; /* Tampilkan gambar aktif */
+  z-index: 1; /* Gambar aktif berada di lapisan atas */
+}
+
+.hero-tagline {
+  position: relative;
+  top: 8%;
+}
+
+@media (max-width: 375px) {
+  .hero-tagline {
+    top: 0%;
+  }
+}
+
+.element {
+  content: "";
+  top: 100vh;
+  background: linear-gradient(to top, var(--gray-900), transparent);
+  height: 50%;
+  z-index: 2;
+  position: sticky;
+}
+
+/* .hero-tagline h1,
+h4,
+p {
+  text-shadow: 3px 3px 3px var(--gray-900);
+} */
+
 .hero-tagline h1 {
   color: var(--white);
   font-weight: 700;
   font-size: 50px;
   line-height: 72px;
-  margin-bottom: 20px;
 }
 
 .hero-tagline p {
+  margin-bottom: 0;
   font-size: 16px;
   color: var(--white);
   width: 80%;
@@ -670,6 +711,16 @@ body h2 {
 @media (max-width: 1440px) {
   #about {
     height: auto;
+    margin-top: 25px;
+  }
+
+  .box-certificate h2 {
+    margin-bottom: 0 !important;
+  }
+
+  .cards {
+    padding: 0 !important;
+    padding-bottom: 20px !important;
   }
 }
 
@@ -692,6 +743,12 @@ body h2 {
     box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
     padding: 10px;
     margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    margin-top: 15px;
   }
 }
 
@@ -814,11 +871,10 @@ body h2 {
 @media (max-width: 1036px) {
   #certificate {
     position: unset;
-    margin-top: 30px;
   }
 
   .box-certificate {
-    margin-bottom: -10px;
+    margin-bottom: 10px;
   }
 
   .box-certificate img {
@@ -860,7 +916,7 @@ body h2 {
   }
 
   .box-certificate {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -1947,8 +2003,9 @@ a:hover {
 }
 
 /* Mengatur agar body tidak dapat discroll selama preloader muncul */
-body.no-scroll {
-  overflow: hidden;
+.no-scroll {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .spinner {
