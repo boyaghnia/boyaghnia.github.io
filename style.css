@@ -492,6 +492,11 @@ body h2 {
   z-index: 3;
 }
 
+.scroll-down a,
+p:hover {
+  color: white !important;
+}
+
 .scroll-down a {
   color: white;
   text-decoration: none;
@@ -539,6 +544,46 @@ body h2 {
   width: 100%;
 }
 
+.tombol-navigasi {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column; /* Tampilkan tombol secara vertikal */
+  gap: 5px; /* Jarak antar tombol */
+}
+
+@media (max-width: 425px) {
+  .tombol-navigasi {
+    display: none;
+  }
+}
+
+.tombol {
+  background-color: white;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 0px;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.tombol:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Warna lebih gelap saat hover */
+  transform: scale(1.1); /* Efek zoom */
+}
+
+.tombol.active {
+  background-color: var(--red-900); /* Warna tombol aktif */
+  transform: scale(1.2); /* Perbesar ukuran tombol aktif */
+  font-weight: bold; /* Tampilkan tombol lebih tebal */
+  color: white; /* Warna teks putih */
+}
+
 .gambar-besar {
   position: absolute;
   width: 100vw;
@@ -568,9 +613,19 @@ body h2 {
   top: 8%;
 }
 
+@media (max-width: 768px) {
+  .hero-tagline h4 {
+    width: 85%;
+  }
+}
+
 @media (max-width: 375px) {
   .hero-tagline {
     top: 0%;
+  }
+
+  .hero-tagline h4 {
+    width: 100%;
   }
 }
 

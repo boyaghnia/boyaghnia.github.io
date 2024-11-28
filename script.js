@@ -73,25 +73,54 @@ window.addEventListener("scroll", function () {
 
 // Pilih semua gambar dalam elemen .gambar-besar
 const images = document.querySelectorAll(".gambar-besar img");
+const tombolNavigasi = document.querySelectorAll(".tombol"); // Pilih semua tombol navigasi
 let HeroImage = 0; // Indeks gambar aktif
 
 // Fungsi untuk mengganti gambar
 function changeImage() {
-  // Hapus kelas "active" dari gambar saat ini
+  // Hapus kelas "active" dari gambar dan tombol saat ini
   images[HeroImage].classList.remove("active");
+  tombolNavigasi[HeroImage].classList.remove("active");
 
   // Pindah ke gambar berikutnya (loop kembali ke awal jika sudah di akhir)
   HeroImage = (HeroImage + 1) % images.length;
 
-  // Tambahkan kelas "active" ke gambar berikutnya
+  // Tambahkan kelas "active" ke gambar dan tombol berikutnya
   images[HeroImage].classList.add("active");
+  tombolNavigasi[HeroImage].classList.add("active");
 }
 
 // Mulai dengan gambar pertama
 images[HeroImage].classList.add("active");
+tombolNavigasi[HeroImage].classList.add("active");
 
-// Jalankan fungsi changeImage setiap 3 detik
+// Jalankan fungsi changeImage setiap 6 detik
 setInterval(changeImage, 6000);
+
+// Tombol Navigasi Slider ----------------------------------------------------------------------------------
+
+const heroImages = document.querySelectorAll(".gambar-besar img");
+const tombolNavigasi2 = document.querySelectorAll(".tombol");
+
+// Fungsi untuk menampilkan gambar sesuai indeks
+function showImage(index) {
+  // Reset semua gambar
+  heroImages.forEach((img) => img.classList.remove("active"));
+
+  // Tampilkan gambar sesuai indeks
+  heroImages[index].classList.add("active");
+}
+
+// Tambahkan event listener ke setiap tombol
+tombolNavigasi2.forEach((tombol) => {
+  tombol.addEventListener("click", () => {
+    const index = parseInt(tombol.getAttribute("data-index"), 10); // Ambil indeks dari atribut data-index
+    showImage(index);
+  });
+});
+
+// Tampilkan gambar pertama saat halaman dimuat
+showImage(0);
 
 // Thumbnail Overlay ----------------------------------------------------------------------------------
 
