@@ -217,40 +217,40 @@ body h2 {
 /* Media query untuk layar max-width 1440px */
 @media (max-width: 1440px) {
   .navbar-brand {
-    font-size: 18px; /* Sesuaikan ukuran font */
+    font-size: 18px;
   }
 
   .nav-link {
-    font-size: 15px; /* Kurangi ukuran font untuk link */
-    margin: 0 10px; /* Kurangi margin antar link */
+    font-size: 15px;
+    margin: 0 10px;
   }
 
   .button-primary {
-    font-size: 15px; /* Kurangi ukuran font tombol */
-    min-width: 100px; /* Sesuaikan ukuran tombol */
-    padding: 6px 20px; /* Kurangi padding tombol */
+    font-size: 15px;
+    min-width: 100px;
+    padding: 6px 20px;
   }
 
   .navbar .container {
-    padding: 0 15px; /* Tambahkan padding untuk menyesuaikan dengan layar lebih kecil */
+    padding: 0 15px;
   }
 }
 
 /* Media query untuk layar max-width 1036px */
 @media (max-width: 1036px) {
   .navbar-brand {
-    font-size: 16px; /* Kurangi ukuran font untuk brand */
+    font-size: 16px;
   }
 
   .nav-link {
-    font-size: 14px; /* Kurangi ukuran font untuk link */
-    margin: 0 8px; /* Kurangi margin antar link */
+    font-size: 14px;
+    margin: 0 8px;
   }
 
   .button-primary {
-    font-size: 14px; /* Kurangi ukuran font tombol */
-    min-width: 90px; /* Sesuaikan ukuran tombol */
-    padding: 5px 15px; /* Kurangi padding tombol */
+    font-size: 14px;
+    min-width: 90px;
+    padding: 5px 15px;
   }
 
   /* Mengatur jarak antar elemen di navbar */
@@ -482,7 +482,7 @@ body h2 {
 
 .scroll-down {
   position: fixed;
-  bottom: 40px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -619,13 +619,27 @@ p:hover {
   }
 }
 
+@media (max-width: 425px) {
+  .hero-tagline {
+    top: -17%;
+  }
+
+  .element {
+    height: 70% !important;
+  }
+}
+
 @media (max-width: 375px) {
   .hero-tagline {
-    top: 0%;
+    top: -45%;
   }
 
   .hero-tagline h4 {
     width: 100%;
+  }
+
+  .element {
+    height: 90% !important;
   }
 }
 
@@ -2125,3 +2139,23 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------------------------------- */
+/* Media 344px Samsung Galaxy Z Fold 5 */
+
+@media (max-width: 344px) {
+  .box-about h2 {
+    margin-right: 8px !important;
+  }
+
+  .box-certificate h2 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+/* Media 1180px Height Ipad Air */
+
+@media (max-height: 1180px) {
+  #contact {
+    margin-top: 60px !important;
+  }
+}
