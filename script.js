@@ -144,6 +144,7 @@ const prImages = [
   "asset/img/topologi.jpg",
   "asset/img/bade.jpg",
   "asset/img/asnbeasiswa.jpg",
+  "asset/img/3dmodel.jpg",
 ];
 let prIndex = 0;
 
@@ -352,4 +353,21 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   projects.forEach((project) => observer.observe(project));
+});
+
+// Script untuk mematikan klik kanan -------------------------------------------------------------------
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
+
+// Button Perbaikan -------------------------------------------------------------------
+
+// Menangkap tombol berdasarkan kelas
+const projectButtons = document.querySelectorAll(".project-button");
+
+// Menambahkan event listener untuk setiap tombol
+projectButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    alert("Mohon Maaf, Halaman Project sedang dalam tahap perbaikan. 🙏");
+  });
 });
