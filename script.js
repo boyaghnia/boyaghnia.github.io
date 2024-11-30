@@ -384,6 +384,7 @@ projectButtons.forEach((button) => {
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.querySelector(".navbar");
 const navbarContent = document.querySelector("#navbarSupportedContent");
+const scrollDownElement = document.getElementById("scrollDown");
 
 // Fungsi untuk mengatur blur dan background navbar
 function updateNavbar() {
@@ -393,12 +394,14 @@ function updateNavbar() {
     navbar.style.webkitBackdropFilter = "none";
     navbarContent.style.backdropFilter = "blur(3px)";
     navbarContent.style.webkitBackdropFilter = "blur(3px)";
+    scrollDownElement.classList.add("hidden");
   } else {
     navbar.style.backgroundColor = "rgba(22, 21, 19, 0.8)";
     navbar.style.backdropFilter = "blur(3px)";
     navbar.style.webkitBackdropFilter = "blur(3px)";
     navbarContent.style.backdropFilter = "none";
     navbarContent.style.webkitBackdropFilter = "none";
+    scrollDownElement.classList.remove("hidden");
   }
 }
 

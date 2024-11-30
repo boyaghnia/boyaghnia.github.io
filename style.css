@@ -392,10 +392,8 @@ body h2 {
 /* Responsive Styles */
 @media (max-width: 767px) {
   #navbarSupportedContent {
-    /* display: none; */
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.5s ease;
   }
 
   .menu:checked ~ #navbarSupportedContent {
@@ -411,6 +409,7 @@ body h2 {
     padding: 1rem;
     z-index: 1050;
     opacity: 1;
+    transition: all 0.5s ease;
     visibility: visible;
   }
 
@@ -444,7 +443,7 @@ body h2 {
   .sosmed-menu {
     display: block;
     position: inherit;
-    bottom: 20%;
+    bottom: 12%;
   }
 
   .sosmed-menu ul {
@@ -568,11 +567,6 @@ p:hover {
   }
 }
 
-.scroll-down.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
 /* --------------------------------------------------------------------------------------------------- */
 /* Hero Section */
 
@@ -648,7 +642,7 @@ p:hover {
 
 .hero-tagline {
   position: absolute;
-  bottom: 15%;
+  bottom: 20%;
 }
 
 .element {
