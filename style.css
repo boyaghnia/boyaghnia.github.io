@@ -643,6 +643,36 @@ p:hover {
   }
 }
 
+@media (max-width: 236px) {
+  .hero-tagline {
+    top: -50%;
+  }
+}
+
+@media (max-height: 675px) {
+  .hero-tagline {
+    top: -50%;
+  }
+}
+
+@media (max-height: 625px) {
+  .hero-tagline {
+    top: -53%;
+  }
+}
+
+@media (max-height: 590px) {
+  .hero-tagline {
+    top: -56%;
+  }
+}
+
+@media (max-height: 565px) {
+  .hero-tagline {
+    top: -59%;
+  }
+}
+
 .element {
   content: "";
   top: 100vh;
@@ -2074,6 +2104,7 @@ a:hover {
 .no-scroll {
   overflow: hidden !important;
   overflow-x: hidden !important;
+  overflow-y: hidden !important;
 }
 
 .spinner {

@@ -252,6 +252,10 @@ cardsElement.addEventListener("scroll", handleScroll);
 window.addEventListener("load", function () {
   // Menambahkan kelas 'no-scroll' untuk mencegah scroll saat preloader muncul
   document.body.classList.add("no-scroll");
+  // Pilih elemen <html>
+  const htmlElement = document.documentElement;
+  // Hapus properti overflow-y: hidden
+  htmlElement.style.overflowY = "hidden";
 
   // Simulasi waktu loading (3 detik)
   setTimeout(function () {
@@ -263,6 +267,8 @@ window.addEventListener("load", function () {
     preloader.style.visibility = "hidden";
     content.style.display = "block";
 
+    // Menghapus html 'overflow-y' agar scroll dapat berfungsi
+    htmlElement.style.overflowY = "";
     // Menghapus kelas 'no-scroll' agar scroll dapat berfungsi
     document.body.classList.remove("no-scroll");
   }, 3000); // Durasi 3 detik
