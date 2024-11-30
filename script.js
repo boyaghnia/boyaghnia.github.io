@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       // Scroll ke atas - tampilkan navbar
       navbar.classList.remove("hidden");
-      navbar.classList.add("navbar-scroll-atas");
+      navbar.classList.add("navbar");
     }
     lastScrollTop = scrollTop; // Perbarui posisi scroll terakhir
   });
@@ -377,3 +377,45 @@ projectButtons.forEach((button) => {
     alert("Mohon Maaf, Halaman Project sedang dalam tahap perbaikan. 🙏");
   });
 });
+
+// Menu Mobile Toggle -----------------------------------------------------------
+
+// Pilih elemen checkbox untuk menu dan elemen lainnya
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.querySelector(".navbar");
+const navbarContent = document.querySelector("#navbarSupportedContent");
+
+// Fungsi untuk mengatur blur dan background navbar
+function updateNavbar() {
+  if (menuToggle.checked) {
+    navbar.style.backgroundColor = "var(--gray-900)";
+    navbar.style.backdropFilter = "none";
+    navbar.style.webkitBackdropFilter = "none";
+    navbarContent.style.backdropFilter = "blur(3px)";
+    navbarContent.style.webkitBackdropFilter = "blur(3px)";
+  } else {
+    navbar.style.backgroundColor = "rgba(22, 21, 19, 0.8)";
+    navbar.style.backdropFilter = "blur(3px)";
+    navbar.style.webkitBackdropFilter = "blur(3px)";
+    navbarContent.style.backdropFilter = "none";
+    navbarContent.style.webkitBackdropFilter = "none";
+  }
+}
+
+// Menambahkan event listener pada scroll dan klik link untuk menutup menu
+window.addEventListener("scroll", () => {
+  if (menuToggle.checked) {
+    menuToggle.checked = false;
+    updateNavbar();
+  }
+});
+
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    menuToggle.checked = false;
+    updateNavbar();
+  });
+});
+
+// Menambahkan event listener pada menu toggle untuk mengatur blur
+menuToggle.addEventListener("change", updateNavbar);
