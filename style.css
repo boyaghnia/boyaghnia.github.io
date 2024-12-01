@@ -789,7 +789,8 @@ p:hover {
 }
 
 #about {
-  height: 60vh;
+  height: auto;
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -944,7 +945,7 @@ p:hover {
 /* Certificate */
 
 #certificate {
-  height: 40vh;
+  height: auto;
   width: 100%;
   position: relative;
   bottom: 30px;
@@ -1018,6 +1019,7 @@ p:hover {
 .box-certificate h2 {
   text-align: left;
   margin-right: 15px;
+  margin-bottom: 0;
 }
 
 .box-certificate {
@@ -1050,11 +1052,13 @@ p:hover {
 
 .cards {
   display: flex;
-  padding: 25px 0px;
+  padding: 0;
+  padding-bottom: 25px;
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   position: relative;
+  margin-bottom: 0;
 }
 
 .card-certificate {
@@ -2161,9 +2165,13 @@ a:hover {
 /* --------------------------------------------------------------------------------------------------- */
 /* Media 344px Samsung Galaxy Z Fold 5 */
 
-@media (max-width: 344px) {
+@media (max-width: 349px) {
   .box-about h2 {
     margin-right: 8px !important;
+  }
+
+  .box-about span {
+    width: 130px;
   }
 
   .box-certificate h2 {
