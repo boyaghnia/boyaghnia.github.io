@@ -369,7 +369,7 @@ document.addEventListener("contextmenu", function (event) {
 // Button Perbaikan -------------------------------------------------------------------
 
 // Menangkap tombol berdasarkan kelas
-const projectButtons = document.querySelectorAll(".project-button");
+const projectButtons = document.querySelectorAll(".perbaikan");
 
 // Menambahkan event listener untuk setiap tombol
 projectButtons.forEach((button) => {

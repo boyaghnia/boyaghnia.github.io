@@ -472,8 +472,8 @@ body h2 {
 
 #scrollToTopBtn {
   position: fixed;
-  bottom: 30px; /* Jarak dari bagian bawah layar */
-  right: 30px; /* Jarak dari bagian kanan layar */
+  bottom: 15px; /* Jarak dari bagian bawah layar */
+  right: 15px; /* Jarak dari bagian kanan layar */
   padding: 10px 10px;
   font-size: 16px;
   background-color: transparent;
@@ -483,20 +483,14 @@ body h2 {
   opacity: 0; /* Dimulai dengan opacity 0 untuk disembunyikan */
   transition: opacity 0.5s ease, background-color 0.5s ease; /* Transisi untuk efek smooth */
   z-index: 3;
-}
-
-@media screen and (max-width: 1440px) {
-  #scrollToTopBtn {
-    right: 35px;
-    bottom: 33px;
-  }
+  scale: 0.8;
 }
 
 @media screen and (max-width: 1036px) {
   #scrollToTopBtn {
     right: 15px;
     bottom: 15px;
-    scale: 0.8;
+    scale: 0.7;
   }
 }
 
@@ -1077,7 +1071,7 @@ p:hover {
 /* Adjust Card Widths Based on Screen Size */
 @media (min-width: 1100px) {
   .card-certificate {
-    flex-basis: calc(25% - 60px) !important;
+    flex-basis: calc(25% - 30px) !important;
   }
 }
 
@@ -2186,4 +2180,63 @@ a:hover {
   #contact {
     margin-top: 60px !important;
   }
+}
+
+/* =================================================================================================== */
+
+#prj-1 p {
+  font-size: 1rem;
+}
+
+#distribusi {
+  height: 100vh;
+}
+
+.box-distribusi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-distribusi2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-distribusi2 h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.text-distribusi {
+  font-size: 1rem;
+}
+
+.foto-distribusi {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.foto-distribusi img {
+  position: relative;
+  bottom: 20%;
+}
+
+#distribusi2 {
+  height: 100vh;
+}
+
+.text-distribusi2 {
+  text-align: center;
+}
+
+.td2 {
+  margin-top: 1rem;
+}
+
+.box-distribusi3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
