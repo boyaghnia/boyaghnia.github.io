@@ -29,12 +29,24 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body id="prj-1">
+    <div class="navigation">
+      <!-- Tombol Sebelumnya -->
+      <button id="prev-btn" class="nav-btn" onclick="navigate(-1)">
+        &#9664;
+      </button>
+      <!-- Tombol Selanjutnya -->
+      <button id="next-btn" class="nav-btn" onclick="navigate(1)">
+        &#9654;
+      </button>
+    </div>
+
     <!-- S1 ---------------------------------- -->
-    <section id="distribusi">
+    <section id="distribusi" class="section active">
       <div class="container h-100 my-auto box-distribusi">
-        <div class="row box-distribusi2">
-          <div class="col-md-6 text-distribusi">
+        <div class="row h-100 box-distribusi2">
+          <div class="col-md-6 text-distribusi-s1">
             <h1>Distribusi Jaringan Internet di Bandar Udara Bade</h1>
+            <p><span>oleh Boy Aghnia Rifadhan</span></p>
             <p>
               Selain aktif menjadi Humas, saya juga terlibat dalam beberapa
               tugas sebagai Network Administrator di bawah pengawasan Ketua Tim
@@ -68,7 +80,12 @@
     </section>
 
     <!-- S2 ---------------------------------- -->
-    <section id="distribusi2">
+    <div id="overlay2" class="overlay">
+      <img id="overlayImage2" src="" alt="Overlay Image" />
+      <span class="close-btn" onclick="closeOverlay2()">X</span>
+    </div>
+
+    <section id="distribusi2" class="section">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-lg-12 my-auto">
@@ -79,8 +96,8 @@
               </p>
               <img
                 src="asset/img/topologi.jpg"
-                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
-                class="img-fluid"
+                alt=""
+                onclick="openOverlay2(0)"
               />
               <p class="td2">
                 Topologi jaringan yang digunakan di Bandar Udara Bade dirancang
@@ -100,17 +117,34 @@
     </section>
 
     <!-- S3 ---------------------------------- -->
-    <section id="distribusi3">
+    <section id="distribusi3" class="section">
       <div class="container h-100 my-auto box-distribusi">
         <div class="row box-distribusi3">
-          <div class="col-md-6 foto-distribusi">
-            <img
-              src="asset/img/test-jaringan2 copy.jpg"
-              alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
-              class="img-fluid"
-            />
+          <div class="foto-distribusi-s3">
+            <div class="fdr1">
+              <img
+                src="asset/img/test-jaringan2 copy.jpg"
+                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+                class="img-fluid"
+              />
+            </div>
+            <div class="fdr2">
+              <img
+                src="asset/img/test-jaringan2 copy.jpg"
+                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+                class="img-fluid"
+              />
+            </div>
+            <div class="fdr3">
+              <img
+                src="asset/img/test-jaringan2 copy.jpg"
+                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+                class="img-fluid"
+              />
+            </div>
           </div>
-          <div class="col-md-6 text-distribusi">
+
+          <div class="row text-distribusi">
             <p>
               Saya juga membuat login page sederhana untuk Mikrotik Hotspot
               dengan tujuan mempermudah pengguna untuk terhubung ke jaringan
@@ -131,12 +165,107 @@
         </div>
       </div>
     </section>
+
+    <!-- S4 ---------------------------------- -->
+    <section id="distribusi" class="section">
+      <div class="container h-100 mb-5 my-auto box-distribusi">
+        <div class="row box-distribusi2">
+          <div class="col-md-6 foto-distribusi">
+            <img
+              src="asset/img/test-jaringan.jpg"
+              alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 text-distribusi-s1">
+            <p>
+              Dengan infrastruktur yang memadai, sistem ini tidak hanya
+              mendukung operasional harian bandara, tetapi juga meningkatkan
+              efisiensi layanan dan kenyamanan bagi seluruh pengguna. Monitoring
+              berkelanjutan dan pemeliharaan rutin juga diterapkan untuk menjaga
+              stabilitas dan performa jaringan, sehingga kualitas layanan
+              internet di Bandar Udara Bade tetap terjaga.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+      // Navigasi antar section -------------------------------------------------------
+
+      let currentSection = 0; // Index section aktif
+      const sections = document.querySelectorAll(".section");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+
+      function navigate(direction) {
+        // Hapus class aktif pada section saat ini
+        sections[currentSection].classList.remove("active");
+
+        // Tentukan index section baru
+        currentSection += direction;
+
+        // Tambahkan class transisi (prev/next)
+        sections.forEach((section, index) => {
+          if (index === currentSection) {
+            section.classList.add("active");
+            section.classList.remove("prev", "next");
+          } else if (index < currentSection) {
+            section.classList.add("prev");
+            section.classList.remove("active", "next");
+          } else if (index > currentSection) {
+            section.classList.add("next");
+            section.classList.remove("active", "prev");
+          }
+        });
+
+        // Atur visibilitas tombol
+        prevBtn.style.visibility = currentSection === 0 ? "hidden" : "visible";
+        prevBtn.style.opacity = currentSection === 0 ? "0" : "1";
+        nextBtn.style.visibility =
+          currentSection === sections.length - 1 ? "hidden" : "visible";
+        nextBtn.style.opacity =
+          currentSection === sections.length - 1 ? "0" : "1";
+      }
+
+      // Inisialisasi awal
+      sections[0].classList.add("active");
+
+      // Gambar Topologi --------------------------------------------------------------
+      const prImages = ["asset/img/topologi.jpg"];
+      let prIndex = 0;
+
+      function openOverlay2(index) {
+        prIndex = index;
+        document.getElementById("overlayImage2").src = prImages[prIndex];
+        document.getElementById("overlay2").style.display = "flex";
+
+        // Tambahkan event listener untuk mendeteksi penekanan tombol panah pada keyboard
+        document.addEventListener("keydown", handleKeydown);
+      }
+
+      // Fungsi untuk menutup overlay kedua
+      function closeOverlay2() {
+        document.getElementById("overlay2").style.display = "none";
+        document.removeEventListener("keydown", handleKeydown); // Hapus event listener saat overlay kedua ditutup
+      }
+
+      // Fungsi untuk menangani penekanan tombol pada keyboard
+      function handleKeydown(event) {
+        const overlay = document.getElementById("overlay");
+        const overlay2 = document.getElementById("overlay2");
+
+        if (event.key === "Escape") {
+          closeOverlay2();
+        }
+      }
+    </script>
   </body>
 </html>
-
-<!--   
-Dengan infrastruktur yang memadai, sistem ini tidak hanya mendukung operasional
-harian bandara, tetapi juga meningkatkan efisiensi layanan dan kenyamanan bagi
-seluruh pengguna. Monitoring berkelanjutan dan pemeliharaan rutin juga
-diterapkan untuk menjaga stabilitas dan performa jaringan, sehingga kualitas
-layanan internet di Bandar Udara Bade tetap terjaga.  -->

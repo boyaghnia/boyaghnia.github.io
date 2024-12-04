@@ -247,6 +247,15 @@ function handleScroll() {
 // Tambahkan event listener untuk mendeteksi scroll pada elemen .cards
 cardsElement.addEventListener("scroll", handleScroll);
 
+// Panah Kanan Sertifikat Geser Kartu -------------------------------------------------------------------
+
+function scrollCards() {
+  const cards = document.querySelector(".cards");
+
+  // Geser elemen ke kanan dengan menambah nilai scrollLeft
+  cards.scrollLeft += 1600; // Sesuaikan nilai 200 sesuai dengan lebar kartu
+}
+
 // Preloader ----------------------------------------------------------------------------------
 
 window.addEventListener("load", function () {

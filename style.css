@@ -797,9 +797,9 @@ p:hover {
     margin-top: 25px;
   }
 
-  .box-certificate h2 {
+  /* .box-certificate h2 {
     margin-bottom: 0 !important;
-  }
+  } */
 
   .cards {
     padding: 0 !important;
@@ -1013,7 +1013,8 @@ p:hover {
 .box-certificate h2 {
   text-align: left;
   margin-right: 15px;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
+  line-height: 60px;
 }
 
 .box-certificate {
@@ -1053,6 +1054,7 @@ p:hover {
   scroll-snap-type: x mandatory;
   position: relative;
   margin-bottom: 0;
+  scroll-behavior: smooth;
 }
 
 .card-certificate {
@@ -2192,6 +2194,10 @@ a:hover {
   height: 100vh;
 }
 
+#distribusi2 {
+  padding-top: 20px;
+}
+
 .box-distribusi {
   display: flex;
   justify-content: center;
@@ -2205,26 +2211,34 @@ a:hover {
 }
 
 .box-distribusi2 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 0 !important;
   font-weight: 700;
+}
+
+.text-distribusi-s1 {
+  text-align: left;
 }
 
 .text-distribusi {
   font-size: 1rem;
+  text-align: center;
+  margin: auto;
 }
 
 .foto-distribusi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   height: 100vh;
 }
 
-.foto-distribusi img {
-  position: relative;
-  bottom: 20%;
-}
-
-#distribusi2 {
-  height: 100vh;
+.foto-distribusi-s3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
 .text-distribusi2 {
@@ -2239,4 +2253,78 @@ a:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+/* Tombol navigasi */
+.navigation {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  pointer-events: none; /* Tidak mengganggu scroll */
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  pointer-events: all; /* Aktifkan interaksi pada tombol */
+  transition: all 0.5s ease;
+}
+
+/* Pastikan tombol kanan selalu muncul di sisi kanan */
+#next-btn {
+  margin-right: 20px; /* Jarak tombol kanan dari tepi layar */
+}
+
+/* Tombol kiri tersembunyi di awal */
+#prev-btn {
+  visibility: hidden;
+  opacity: 0;
+  margin-left: 20px; /* Jarak tombol kiri dari tepi layar */
+}
+
+.nav-btn:hover {
+  color: var(--red-900);
+  /* border: 1px solid var(--red-900); */
+  background-color: white;
+  border: 0px solid white;
+}
+
+/* Wrapper untuk semua section */
+.sections-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Style untuk setiap section */
+.section {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Section yang sedang aktif */
+.section.active {
+  left: 0;
+  opacity: 1;
+}
+
+.section.prev {
+  left: -100%;
+}
+
+.section.next {
+  left: 100%;
 }
