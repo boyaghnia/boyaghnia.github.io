@@ -91,8 +91,8 @@
           <div class="col-lg-12 my-auto">
             <div class="text-distribusi2">
               <p>
-                Adapun Topologi Distribusi Jaringan Internet di Bandar Udara
-                Bade ialah sebagaimana terlampir pada Gambar di bawah.
+                Adapun Topologi Distribusi Jaringan Internet yang telah saya
+                buat ialah sebagaimana terlampir pada Gambar di bawah.
               </p>
               <img
                 src="asset/img/topologi.jpg"
@@ -124,21 +124,24 @@
             <div class="fdr1">
               <img
                 src="asset/img/test-jaringan2 copy.jpg"
-                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+                alt=""
+                onclick="openOverlay2(1)"
                 class="img-fluid"
               />
             </div>
             <div class="fdr2">
               <img
-                src="asset/img/test-jaringan2 copy.jpg"
-                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+                src="asset/img/test123.jpg"
+                alt=""
+                onclick="openOverlay2(2)"
                 class="img-fluid"
               />
             </div>
             <div class="fdr3">
               <img
-                src="asset/img/test-jaringan2 copy.jpg"
-                alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
+                src="asset/img/testtest.jpg"
+                alt=""
+                onclick="openOverlay2(3)"
                 class="img-fluid"
               />
             </div>
@@ -167,12 +170,39 @@
     </section>
 
     <!-- S4 ---------------------------------- -->
-    <section id="distribusi" class="section">
+    <section id="distribusi2" class="section">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-12 my-auto">
+            <div class="text-distribusi2">
+              <img
+                src="asset/img/server2.png"
+                alt=""
+                onclick="openOverlay2(4)"
+              />
+              <p class="td2">
+                Dengan infrastruktur yang memadai, sistem ini tidak hanya
+                mendukung operasional harian bandara, tetapi juga meningkatkan
+                efisiensi layanan dan kenyamanan bagi seluruh pengguna.
+                Monitoring berkelanjutan dan pemeliharaan rutin juga diterapkan
+                untuk menjaga stabilitas dan performa jaringan, sehingga
+                kualitas layanan internet di Bandar Udara Bade tetap terjaga.
+              </p>
+              <a href="index.html#project"
+                ><button class="back-to-home">Kembali Ke Portfolio</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="distribusi" class="section">
       <div class="container h-100 mb-5 my-auto box-distribusi">
         <div class="row box-distribusi2">
           <div class="col-md-6 foto-distribusi">
             <img
-              src="asset/img/test-jaringan.jpg"
+              src="asset/img/server1.JPG"
               alt="Topologi Distribusi Jaringan Internet di Bandar Udara Bade"
               class="img-fluid"
             />
@@ -189,7 +219,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Feather Icons -->
     <script>
@@ -239,7 +269,13 @@
       sections[0].classList.add("active");
 
       // Gambar Topologi --------------------------------------------------------------
-      const prImages = ["asset/img/topologi.jpg"];
+      const prImages = [
+        "asset/img/topologi.jpg",
+        "asset/img/test-jaringan2 copy.jpg",
+        "asset/img/test123.jpg",
+        "asset/img/testtest.jpg",
+        "asset/img/server2.png",
+      ];
       let prIndex = 0;
 
       function openOverlay2(index) {

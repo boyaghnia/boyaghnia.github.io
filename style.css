@@ -167,7 +167,6 @@ body h2 {
 
 .nav-link:hover {
   color: var(--red-900);
-  text-decoration: underline;
 }
 
 .button-primary {
@@ -191,7 +190,6 @@ body h2 {
 .button-primary:hover {
   background-color: var(--white);
   color: var(--red-900);
-  text-decoration: underline;
 }
 
 @media (max-width: 1036px) {
@@ -1662,7 +1660,6 @@ p:hover {
 .project-button:hover {
   background-color: var(--white);
   color: var(--red-900);
-  text-decoration: underline;
 }
 
 .text-project-kanan {
@@ -2188,6 +2185,7 @@ a:hover {
 
 #prj-1 p {
   font-size: 1rem;
+  overflow: hidden;
 }
 
 #distribusi {
@@ -2243,6 +2241,10 @@ a:hover {
 
 .text-distribusi2 {
   text-align: center;
+}
+
+.text-distribusi2 img:hover {
+  cursor: pointer;
 }
 
 .td2 {
@@ -2327,4 +2329,62 @@ a:hover {
 
 .section.next {
   left: 100%;
+}
+
+.back-to-home {
+  border: 1px solid var(--white);
+  color: var(--white);
+  text-align: center;
+  background-color: transparent;
+  min-width: 150px;
+  min-height: 40px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: all 0.5s;
+}
+
+.back-to-home:hover {
+  background-color: var(--white);
+  color: var(--red-900);
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    top: 90%;
+    width: 50%;
+    transform: translateX(50%);
+  }
+
+  #distribusi {
+    margin: 2rem 0;
+  }
+
+  .box-distribusi h1 {
+    font-size: 30px;
+  }
+
+  .box-distribusi2 {
+    flex-direction: column-reverse;
+  }
+
+  .foto-distribusi {
+    height: 30%;
+    margin-bottom: 1rem;
+  }
+
+  .text-distribusi-s1 {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .foto-distribusi {
+    height: 20%;
+  }
+}
+
+@media (max-width: 430px) {
+  .foto-distribusi {
+    display: none;
+  }
 }
