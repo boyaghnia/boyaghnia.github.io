@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="overflow: hidden" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -307,6 +307,9 @@
           closeOverlay2();
         }
       }
+
+      document.documentElement.style.overflow = "hidden !important";
+      document.body.style.overflow = "hidden !important";
     </script>
   </body>
 </html>
