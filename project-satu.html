@@ -30,13 +30,15 @@
   </head>
   <body id="prj-1">
     <div class="navigation">
-      <!-- Tombol Sebelumnya -->
-      <button id="prev-btn" class="nav-btn" onclick="navigate(-1)">
-        &#9664;
+      <!-- Tombol Atas -->
+      <button id="up-btn" class="nav-btn" onclick="navigate(-1)">
+        &#9650;
+        <!-- Ikon panah atas -->
       </button>
-      <!-- Tombol Selanjutnya -->
-      <button id="next-btn" class="nav-btn" onclick="navigate(1)">
-        &#9654;
+      <!-- Tombol Bawah -->
+      <button id="down-btn" class="nav-btn" onclick="navigate(1)">
+        &#9660;
+        <!-- Ikon panah bawah -->
       </button>
     </div>
 
@@ -232,8 +234,8 @@
 
       let currentSection = 0; // Index section aktif
       const sections = document.querySelectorAll(".section");
-      const prevBtn = document.getElementById("prev-btn");
-      const nextBtn = document.getElementById("next-btn");
+      const upBtn = document.getElementById("up-btn");
+      const downBtn = document.getElementById("down-btn");
 
       function navigate(direction) {
         // Hapus class aktif pada section saat ini
@@ -257,13 +259,16 @@
         });
 
         // Atur visibilitas tombol
-        prevBtn.style.visibility = currentSection === 0 ? "hidden" : "visible";
-        prevBtn.style.opacity = currentSection === 0 ? "0" : "1";
-        nextBtn.style.visibility =
+        upBtn.style.visibility = currentSection === 0 ? "hidden" : "visible";
+        upBtn.style.opacity = currentSection === 0 ? "0" : "1";
+        downBtn.style.visibility =
           currentSection === sections.length - 1 ? "hidden" : "visible";
-        nextBtn.style.opacity =
+        downBtn.style.opacity =
           currentSection === sections.length - 1 ? "0" : "1";
       }
+
+      // Inisialisasi awal
+      sections[0].classList.add("active");
 
       // Inisialisasi awal
       sections[0].classList.add("active");

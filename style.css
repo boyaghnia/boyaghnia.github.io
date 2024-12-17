@@ -2185,7 +2185,8 @@ a:hover {
 
 #prj-1 p {
   font-size: 1rem;
-  overflow: hidden;
+  overflow: hidden !important;
+  overflow-y: hidden !important;
 }
 
 #distribusi {
@@ -2258,14 +2259,18 @@ a:hover {
 }
 
 /* Tombol navigasi */
+/* Navigasi Vertikal */
 .navigation {
   position: fixed;
-  top: 50%;
-  width: 100%;
+  right: 2%;
+  transform: translateY(100%);
+  width: auto;
+  height: 30%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   z-index: 10;
-  pointer-events: none; /* Tidak mengganggu scroll */
+  pointer-events: none;
 }
 
 .nav-btn {
@@ -2275,27 +2280,33 @@ a:hover {
   padding: 8px 15px;
   font-size: 16px;
   cursor: pointer;
-  pointer-events: all; /* Aktifkan interaksi pada tombol */
+  pointer-events: all; /* Aktifkan interaksi */
   transition: all 0.5s ease;
-}
-
-/* Pastikan tombol kanan selalu muncul di sisi kanan */
-#next-btn {
-  margin-right: 20px; /* Jarak tombol kanan dari tepi layar */
-}
-
-/* Tombol kiri tersembunyi di awal */
-#prev-btn {
-  visibility: hidden;
-  opacity: 0;
-  margin-left: 20px; /* Jarak tombol kiri dari tepi layar */
 }
 
 .nav-btn:hover {
   color: var(--red-900);
-  /* border: 1px solid var(--red-900); */
   background-color: white;
   border: 0px solid white;
+}
+
+/* Tombol atas tersembunyi di awal */
+#up-btn {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.section {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.section.active {
+  opacity: 1;
 }
 
 /* Wrapper untuk semua section */
@@ -2306,29 +2317,10 @@ a:hover {
   height: 100vh;
 }
 
-/* Style untuk setiap section */
-.section {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
 /* Section yang sedang aktif */
 .section.active {
-  left: 0;
+  margin: auto;
   opacity: 1;
-}
-
-.section.prev {
-  left: -100%;
-}
-
-.section.next {
-  left: 100%;
 }
 
 .back-to-home {
@@ -2349,12 +2341,6 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-  .navigation {
-    top: 90%;
-    width: 50%;
-    transform: translateX(50%);
-  }
-
   #distribusi {
     margin: 2rem 0;
   }
