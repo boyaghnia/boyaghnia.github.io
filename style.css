@@ -2345,6 +2345,21 @@ a:hover {
     margin: 2rem 0;
   }
 
+  .navigation {
+    position: fixed;
+    transform: translateX(50%);
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    z-index: 10;
+    bottom: 5%;
+    width: 50%;
+    pointer-events: none;
+    height: auto;
+    right: auto;
+  }
+
   .box-distribusi h1 {
     font-size: 30px;
   }
