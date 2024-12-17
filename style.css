@@ -2348,6 +2348,10 @@ a:hover {
     scale: 85%;
   }
 
+  .h-100 {
+    height: auto !important;
+  }
+
   .navigation {
     position: fixed;
     transform: translateX(50%);
