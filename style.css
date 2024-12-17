@@ -2346,7 +2346,7 @@ a:hover {
 @media (max-width: 767px) {
   .section {
     scale: 85%;
-    padding-bottom: 255px;
+    padding-bottom: 250px;
   }
 
   .navigation {
