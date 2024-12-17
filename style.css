@@ -2344,6 +2344,10 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+  .section {
+    scale: 85%;
+  }
+
   .navigation {
     position: fixed;
     transform: translateX(50%);
