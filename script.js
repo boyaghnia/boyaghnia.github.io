@@ -280,7 +280,7 @@ window.addEventListener("load", function () {
     htmlElement.style.overflowY = "";
     // Menghapus kelas 'no-scroll' agar scroll dapat berfungsi
     document.body.classList.remove("no-scroll");
-  }, 3000); // Durasi 3 detik
+  }, 1500); // Durasi 1,5 detik
 });
 
 // Aktifkan efek hover pada bagian "About" saat elemen terlihat --------------------------------
